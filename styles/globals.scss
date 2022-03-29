@@ -1,0 +1,220 @@
+@font-face {
+	font-family: "Barracuda";
+	src: url("/fonts/Barracuda-Bold.ttf");
+	font-style: bold;
+	font-weight: 600;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Barracuda";
+	src: url("/fonts/Barracuda-BoldItalic.ttf");
+	font-style: italic;
+	font-weight: 600;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Barracuda";
+	src: url("/fonts/Barracuda-Italic.ttf");
+	font-style: italic;
+	font-weight: 400;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Barracuda";
+	src: url("/fonts/Barracuda-Light.ttf");
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Barracuda";
+	src: url("/fonts/Barracuda-LightItalic.ttf");
+	font-style: italic;
+	font-weight: 300;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Barracuda";
+	src: url("/fonts/Barracuda-regular.ttf");
+	font-style: initial;
+	font-weight: 300;
+	font-display: swap;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: Barracuda;
+}
+
+$Black: #313131;
+$BlackS: #171717;
+$Primary: #0bba60;
+$PrimaryDark: #0e9c53;
+$WhiteS: #f4f6f9;
+$WhiteSS: rgba(225, 230, 237, 0.64);
+
+a {
+	text-decoration: none;
+}
+//Typography
+.navText {
+	text-decoration: none;
+	font-size: 18px;
+	color: $Primary;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 37px;
+	position: relative;
+	transition: all .35s;
+	width: 300%;
+	height: 100%;
+	span{
+		position: relative;
+		z-index: 2;
+	  }
+}
+
+.navText:after{
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background: $Primary;
+	transition: all .35s;
+  }
+  
+  .navText:hover{
+	color: #fff;
+  }
+  
+  .navText:hover:after{
+	width: 100%;
+  }
+
+.body1 {
+	text-decoration: none;
+	font-size: 18px;
+	color: $Primary;
+	font-weight: normal;
+}
+
+ul {
+	padding-inline-start: 0px;
+	margin-block-end: 0.5em;
+}
+.borderNav {
+	border-right: 2px solid #828282;
+	height: 100px;
+}
+.menu {
+	ul {
+		display: flex;
+		list-style: none;
+		margin-bottom: 0;
+		justify-content: space-around;
+	}
+	ul a {
+		text-decoration: none;
+		font-size: 18px;
+		color: $Black;
+		font-weight: bold;
+		text-transform: uppercase;
+		padding: 24px;
+		display: block;
+	}
+}
+.hamburger {
+	background: #ffffff;
+	max-height: 100px;
+	min-height: 100px;
+	display: flex;
+	justify-content: space-between;
+	width: 100vw;
+}
+.ham {
+	text-align: end;
+	ul {
+		li {
+			list-style: none;
+			margin-right: 10px;
+		}
+		a {
+			font-size: 18px;
+			color: $Black;
+			font-weight: bold;
+			text-transform: uppercase;
+			padding: 24px;
+			display: inline-block;
+			text-decoration: none;
+		}
+		.sp {
+			color: $Primary !important  ;
+		}
+		a:hover {
+			color: $Primary;
+		}
+	}
+}
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	width: 100%;
+	background-color: #ffffff;
+}
+footer {
+	background-color: $BlackS;
+	min-height: 400px;
+}
+.button1 {
+	background-color: $Primary;
+	padding: 12px 24px;
+	border-radius: 70px;
+	position: relative;
+	transition: all 0.35s;
+	cursor: pointer;
+	a {
+		color: $WhiteS;
+	}
+}
+
+
+.menus {
+	ul {
+		display: flex;
+		list-style: none;
+		justify-content: flex-end;
+		padding-top: 16px;
+		a {
+			text-decoration: none;
+			font-size: 16px;
+			color: $WhiteSS;
+			font-weight: 500;
+			padding: 12px 1px 1px 12px;
+			display: block;
+		}
+	}
+}
+
+.line {
+	opacity: 0.64;
+	border: 0.1px solid #ffffff;
+	width: 100%;
+}
+.hero3{
+	background-color: $BlackS;
+	min-height: 500px;
+}
+.hero4{
+	background-color: $Primary;
+	min-height: 600px;
+}
+.rCard{
+	padding: 12px;
+	margin-right: 12px;
+	}

@@ -1,0 +1,49 @@
+$Primary: #0bba60;
+.herobtn{
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+.hero{
+    padding-top: 100px;
+}
+.padd100{
+    margin-top: 230px;
+    margin-bottom: 10px;
+}
+.vid{
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+.bgs{
+    background-color: $Primary;
+}
+.brandLogo{
+    filter: grayscale(100%);
+
+}
+.brandLogo:hover{
+    filter: grayscale(0%);
+}
+.padding100{
+	padding-top: 100px;
+}
+@media only screen and (max-width: 901px) {
+    .padd100{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .herobtn{
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .hero{
+        padding-top: 30px;
+    }
+}
+@media only screen and (max-width: 701px) {
+    .brandLogo{
+
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
