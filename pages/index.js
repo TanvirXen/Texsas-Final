@@ -13,7 +13,7 @@ import imageUrlFor from "../utils/imageUrlFor.js";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import CardR from "../components/TestimonialCard.js";
+import CardR from "../Components/TestimonialCard.js";
 const brand = '*[_type=="brand"]';
 function Home({ brands }) {
 	const sliders = useRef(null);
