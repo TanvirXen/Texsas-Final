@@ -9,11 +9,11 @@ import Typography from "@mui/material/Typography";
 import styles from "../styles/Home.module.scss";
 import Marquee from "react-easy-marquee";
 import sanity from "../lib/sanity";
-import imageUrlFor from "../utils/imageUrlFor";
+import imageUrlFor from "../utils/imageUrlFor.js";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import CardR from "../components/TestimonialCard";
+import CardR from "../components/TestimonialCard.js";
 const brand = '*[_type=="brand"]';
 function Home({ brands }) {
 	const sliders = useRef(null);
