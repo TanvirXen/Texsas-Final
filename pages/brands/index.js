@@ -12,7 +12,7 @@ return(
 <div>
     <div className="brandHero">
 <Container maxWidth="xl">
-<Typography variant="h3" color="secondary.dark" className={styles.hero}>
+<Typography variant="h3" color="secondary.dark" className={styles.hero+' '+'animate__animated animate__bounceInLeft'}>
 Brands
 </Typography>
 </Container>

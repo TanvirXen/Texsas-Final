@@ -10,17 +10,25 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Head from "next/head";
+import AOS from 'aos';
 const product = '*[_type=="product"]{...,brand->}';
 
 
 function Products({products}){
   let data =Object.values(products)
-
+	useEffect(() => {
+		AOS.init();
+	  }, []);
 return(
 <div>
+<Head>
+
+				<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+			</Head>
     <div className="brandHero">
 <Container maxWidth="xl">
-<Typography variant="h3" color="secondary.dark" className={styles.hero}>
+<Typography variant="h3" color="secondary.dark" className={styles.hero+' '+'animate__animated animate__bounceInLeft'}>
 Products
 </Typography>
 </Container>
@@ -50,7 +58,7 @@ direction="row"
           expandIcon={<ExpandMoreIcon style={{color:'#0BBA60'}}/>}
           aria-controls="panel1a-content"
           id="panel1a-header"
-          style={{borderBottom:'2px solid #6041FF',boxShadow: "none"}}
+          style={{borderBottom:'2px solid #D0D0D0',boxShadow: "none"}}
         >
           <Typography variant='h5'>Sort By Brand</Typography>
         </AccordionSummary>
@@ -73,7 +81,7 @@ direction="row"
           expandIcon={<ExpandMoreIcon style={{color:'#0BBA60'}} />}
           aria-controls="panel1a-content"
           id="panel1a-header"
-          style={{borderBottom:'2px solid #6041FF',boxShadow: "none"}}
+          style={{borderBottom:'2px solid #D0D0D0',boxShadow: "none"}}
         >
           <Typography variant='h5'>Sort By Category</Typography>
         </AccordionSummary>

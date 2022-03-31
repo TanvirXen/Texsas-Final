@@ -16,7 +16,8 @@ export default function BrandCard({image,title,logo,description}) {
     lg={4}
     xl={4}
   >
-    <Card sx={{ maxWidth: 345 }} style={{ border: "none", boxShadow: "none" ,borderRadius:'0px'}}>
+    <div data-aos="fade-left" data-aos-duration="1600">
+    <Card sx={{ maxWidth: 345 }} style={{ border: "none", boxShadow: "none" ,borderRadius:'0px'}} >
       <CardActionArea>
         <CardMedia
           component="img"
@@ -35,6 +36,8 @@ export default function BrandCard({image,title,logo,description}) {
         </CardContent>
       </CardActionArea>
     </Card>
+    </div>
+
     </Grid>
   );
 }
