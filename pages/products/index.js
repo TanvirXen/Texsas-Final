@@ -11,20 +11,18 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Head from "next/head";
-import AOS from 'aos';
+
+
 const product = '*[_type=="product"]{...,brand->}';
 
 
 function Products({products}){
   let data =Object.values(products)
-	useEffect(() => {
-		AOS.init();
-	  }, []);
+
 return(
 <div>
 <Head>
 
-				<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 			</Head>
     <div className="brandHero">
 <Container maxWidth="xl">
@@ -63,10 +61,10 @@ direction="row"
           <Typography variant='h5'>Sort By Brand</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography  color="primary.main" variant='h6' style={{boxShadow:' 0px 2px 0px rgba(96, 65, 255, 0.4)',paddingBottom:'3px' ,paddingTop:'3px'}}>
+          <Typography  color="primary.main" variant='h6' style={{boxShadow:' 0px 2px 0px #D0D0D0',paddingBottom:'3px' ,paddingTop:'3px'}}>
         Found
           </Typography>
-          <Typography color="primary.main" variant='h6' style={{boxShadow:' 0px 2px 0px rgba(96, 65, 255, 0.4)' ,paddingBottom:'3px' ,paddingTop:'3px'}}>
+          <Typography color="primary.main" variant='h6' style={{boxShadow:' 0px 2px 0px #D0D0D0' ,paddingBottom:'3px' ,paddingTop:'3px'}}>
         Homer
           </Typography>
         </AccordionDetails>
@@ -86,10 +84,10 @@ direction="row"
           <Typography variant='h5'>Sort By Category</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography  color="primary.main" variant='h6' style={{boxShadow:' 0px 2px 0px rgba(96, 65, 255, 0.4)',paddingBottom:'3px' ,paddingTop:'3px'}}>
+          <Typography  color="primary.main" variant='h6' style={{boxShadow:' 0px 2px 0px #D0D0D0',paddingBottom:'3px' ,paddingTop:'3px'}}>
         Printing Machines
           </Typography>
-          <Typography color="primary.main" variant='h6' style={{boxShadow:' 0px 2px 0px rgba(96, 65, 255, 0.4)' ,paddingBottom:'3px' ,paddingTop:'3px'}}>
+          <Typography color="primary.main" variant='h6' style={{boxShadow:' 0px 2px 0px #D0D0D0' ,paddingBottom:'3px' ,paddingTop:'3px'}}>
         Photoshop
           </Typography>
         </AccordionDetails>

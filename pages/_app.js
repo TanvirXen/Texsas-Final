@@ -35,13 +35,13 @@ const outerTheme = createTheme({
 			fontFamily:`"Barracuda"`
 		},
 		h6:{
-			fontFamily:`"IBM Plex Sans"`
+			fontFamily:`"Raleway"`
 		},
 		body1:{
-			fontFamily:`"IBM Plex Sans"`
+			fontFamily:`"Raleway"`
 		},
 		body2:{
-			fontFamily:`"IBM Plex Sans"`
+			fontFamily:`"Raleway"`
 		}
 	},
 });

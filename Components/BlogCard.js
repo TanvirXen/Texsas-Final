@@ -12,12 +12,12 @@ export default function BrandCard({image,title,logo,description}) {
     item
     xs={12}
     sm={6}
-    md={6}
-    lg={4}
-    xl={4}
+    md={4}
+    lg={3}
+    xl={3}
   >
   
-    <Card  style={{ border: "none", boxShadow: "none" ,borderRadius:'0px',width:'100%'}} >
+    <Card sx={{ maxWidth: 345 }} style={{ border: "none", boxShadow: "none" ,borderRadius:'0px'}} >
       <CardActionArea>
         <CardMedia
           component="img"
