@@ -14,6 +14,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CardR from "../Components/TestimonialCard.js";
+
 const brand = '*[_type=="brand"]';
 function Home({ brands }) {
 	const sliders = useRef(null);
@@ -78,10 +79,10 @@ function Home({ brands }) {
 			<Container maxWidth="xl" style={{ paddingBottom: "100px" }}>
 				<Grid container spacing={0}>
 					<Grid item xs={12} md={8} lg={8} xl={8}>
-						<Typography variant="h3" color="black.dark" className={styles.hero}>
+						<Typography variant="h3" color="black.dark" className={styles.hero +' '+'animate__animated animate__backInLeft'}>
 							One Stop Textile Solutions And Services in Bangladesh
 						</Typography>
-						<Typography variant="h6" color="black.dark">
+						<Typography variant="h6" color="black.dark" className='animate__animated animate__backInLeft'>
 							One Stop Textile Solutions And Services in Bangladesh
 						</Typography>
 					</Grid>
@@ -157,6 +158,7 @@ function Home({ brands }) {
 							xl={6}
 							
 						>
+
 							<Typography variant="h6" color="secondary.dark" className={styles.padding100}>
 								OUR VALUES
 							</Typography>
@@ -167,6 +169,7 @@ function Home({ brands }) {
 							>
 								We creeate value from shipment to servicing.
 							</Typography>
+			
 							<span className="button1">
 								<Link href="#">Learn More</Link>
 							</span>

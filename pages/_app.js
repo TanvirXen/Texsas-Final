@@ -1,6 +1,7 @@
 import "../styles/globals.scss";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Layout from "../Components/Layout";
+import 'animate.css';
 const outerTheme = createTheme({
 	palette: {
 		primary: {
