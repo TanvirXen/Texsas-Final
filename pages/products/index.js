@@ -6,12 +6,16 @@ import Typography from "@mui/material/Typography";
 import styles from "../../styles/Brands.module.scss";
 import ProductCard from "../../Components/ProductCard";
 import sanity from "../../lib/sanity";
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 const product = '*[_type=="product"]{...,brand->}';
 
 
 function Products({products}){
-  const data =[... Object.values(products)]
-console.log(data)
+  let data =Object.values(products)
+
 return(
 <div>
     <div className="brandHero">
@@ -23,21 +27,86 @@ Products
 
     </div>
     <Container maxWidth="xl" className={styles.hero1}>
+    <Grid
+
+container 
+spacing={1}
+direction="row"
+
+>
 <Grid
+  xs={12}
+  sm={12}
+  md={4}
+  lg={3}
+  xl={3}
+>
+<Accordion style={{marginRight:'10px',marginBottom:'10px',border: "none", boxShadow: "none" ,borderRadius:'0px'}}  elevation={0}         sx={{
+            '&:before': {
+                display: 'none',
+            }
+        }}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon style={{color:'#0BBA60'}}/>}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+          style={{borderBottom:'2px solid #6041FF',boxShadow: "none"}}
+        >
+          <Typography variant='h5'>Sort By Brand</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography  color="primary.main" variant='h6' style={{boxShadow:' 0px 2px 0px rgba(96, 65, 255, 0.4)',paddingBottom:'3px' ,paddingTop:'3px'}}>
+        Found
+          </Typography>
+          <Typography color="primary.main" variant='h6' style={{boxShadow:' 0px 2px 0px rgba(96, 65, 255, 0.4)' ,paddingBottom:'3px' ,paddingTop:'3px'}}>
+        Homer
+          </Typography>
+        </AccordionDetails>
+
+      </Accordion>
+      <Accordion style={{marginRight:'10px',marginBottom:'10px',border: "none", boxShadow: "none" ,borderRadius:'0px',marginTop:'10px'}}  elevation={0}         sx={{
+            '&:before': {
+                display: 'none',
+            }
+        }}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon style={{color:'#0BBA60'}} />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+          style={{borderBottom:'2px solid #6041FF',boxShadow: "none"}}
+        >
+          <Typography variant='h5'>Sort By Category</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography  color="primary.main" variant='h6' style={{boxShadow:' 0px 2px 0px rgba(96, 65, 255, 0.4)',paddingBottom:'3px' ,paddingTop:'3px'}}>
+        Printing Machines
+          </Typography>
+          <Typography color="primary.main" variant='h6' style={{boxShadow:' 0px 2px 0px rgba(96, 65, 255, 0.4)' ,paddingBottom:'3px' ,paddingTop:'3px'}}>
+        Photoshop
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      </Grid>
+      <Grid
 
   container 
   spacing={1}
   direction="row"
+  xs={12}
+  sm={12}
+  md={8}
+  lg={9}
+  xl={9}
 >
-  {/* {Object.values(products).map((e)=>{
+  {data.map((e)=>{
     return(
-<ProductCard image={e.mainImage} key={e.title} title={e.model} description={e.description} logo={e.brand.logo}/>
+<ProductCard image={e.mainImage} key={e.model} title={e.model} description={e.description[0].children[0].text} logo={e.brand.logo}/>
     )
-  })} */}
+  })}
 
 
 </Grid>
-
+</Grid>
 </Container>
 </div>
 )

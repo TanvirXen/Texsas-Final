@@ -16,13 +16,14 @@ export default function BrandCard({image,title,category,origin}) {
     lg={3}
     xl={3}
   >
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345 }} style={{ border: "none" ,borderRadius:'0px'}}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="180"
           image={imageUrlFor(image)}
           alt="brand logo"
+        style={{boxShadow:'0px 1px 0px #CDCDCD'}}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">

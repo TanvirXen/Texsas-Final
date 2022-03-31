@@ -3,6 +3,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Layout from "../Components/Layout";
 import 'animate.css';
 const outerTheme = createTheme({
+
 	palette: {
 		primary: {
 			main: "#0BBA60",
@@ -18,7 +19,30 @@ const outerTheme = createTheme({
 		}
 	},
 	typography: {
-		fontFamily: "Barracuda",
+		h1:{
+			fontFamily:`"Barracuda"`
+		},
+		h2:{
+			fontFamily:`"Barracuda"`
+		},
+		h3:{
+			fontFamily:`"Barracuda"`
+		},
+		h4:{
+			fontFamily:`"Barracuda"`
+		},
+		h5:{
+			fontFamily:`"Barracuda"`
+		},
+		h6:{
+			fontFamily:`"IBM Plex Sans"`
+		},
+		body1:{
+			fontFamily:`"IBM Plex Sans"`
+		},
+		body2:{
+			fontFamily:`"IBM Plex Sans"`
+		}
 	},
 });
 

@@ -12,11 +12,11 @@ export default function BrandCard({image,title,logo,description}) {
     item
     xs={12}
     sm={6}
-    md={4}
-    lg={3}
-    xl={3}
+    md={6}
+    lg={4}
+    xl={4}
   >
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345 }} style={{ border: "none", boxShadow: "none" ,borderRadius:'0px'}}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -28,10 +28,10 @@ export default function BrandCard({image,title,logo,description}) {
           <Typography gutterBottom variant="h5" component="div">
            {title}
           </Typography>
-          <Typography variant="body1" color="black.dark"   >
+          <Typography variant="body1" color="black.dark" className='texthide'  >
         {description}
           </Typography>
-          <img src={imageUrlFor(logo)}alt="Brandlogo" style={{height:'80px',width:'auto'}} />
+          <img src={imageUrlFor(logo)}alt="Brandlogo" style={{height:'50px',width:'auto'}} />
         </CardContent>
       </CardActionArea>
     </Card>

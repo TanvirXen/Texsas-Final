@@ -67,22 +67,22 @@ function NavbarDesktop() {
 							{" "}
 							<ul>
 								<li>
-									<Link href="#">Home </Link>
+									<Link href="/">Home </Link>
 								</li>
 								<li>
-									<Link href="#">Products </Link>
+									<Link href="/products">Products </Link>
 								</li>
 								<li>
-									<Link href="#">Brands </Link>
+									<Link href="/brands">Brands </Link>
 								</li>
 								<li>
-									<Link href="#">About</Link>
+									<Link href="/about">About</Link>
 								</li>
 								<li>
-									<Link href="#">Gallery </Link>
+									<Link href="/gallery">Gallery </Link>
 								</li>
 								<li>
-									<Link href="#">Blogs</Link>
+									<Link href="/blogs">Blogs</Link>
 								</li>
 							</ul>
 						</div>
@@ -99,7 +99,7 @@ function NavbarDesktop() {
 						alignItems="flex-start"
 						justifyContent="flex-start"
 					>
-						<span className="navText"><span>Get In Touch</span></span>
+						<span className="navText"><span><Link href="/contact"  > Get In Touch</Link> </span></span>
 					</Grid>
 				</Grid>
 			</Container>
@@ -161,7 +161,7 @@ function HamburgerMenu() {
 								<Link href="/about">About</Link>
 							</li>
 							<li>
-								<Link href="/updates">gallery</Link>
+								<Link href="/gallery">gallery</Link>
 							</li>
 							<li>
 								<Link href="/blogs">Blogs</Link>

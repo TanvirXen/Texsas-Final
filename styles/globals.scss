@@ -65,7 +65,7 @@ a {
 	color: $Primary;
 	font-weight: bold;
 	text-transform: uppercase;
-	padding: 37px;
+	padding: 38px;
 	position: relative;
 	transition: all .35s;
 	width: 300%;
@@ -73,7 +73,11 @@ a {
 	span{
 		position: relative;
 		z-index: 2;
+		a{
+			color:$Primary;
+		}
 	  }
+
 }
 
 .navText:after{
@@ -89,6 +93,13 @@ a {
   
   .navText:hover{
 	color: #fff;
+	span{
+
+		a{
+			color: #fff;
+		}
+	  }
+
   }
   
   .navText:hover:after{
@@ -228,3 +239,11 @@ footer {
 	background-color: $Primary;
 	min-height: 220px;
 }
+.texthide {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2; /* number of lines to show */
+			line-clamp: 2; 
+	-webkit-box-orient: vertical;
+ }

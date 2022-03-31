@@ -14,7 +14,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CardR from "../Components/TestimonialCard.js";
-
+import AOS from 'aos';
 const brand = '*[_type=="brand"]';
 function Home({ brands }) {
 	const sliders = useRef(null);
@@ -66,6 +66,10 @@ function Home({ brands }) {
 			},
 		],
 	};
+	useEffect(() => {
+		AOS.init();
+	  }, []);
+
 	return (
 		<div>
 			<Head>
@@ -75,14 +79,15 @@ function Home({ brands }) {
 					type="video/mp4"
 					href="https://firebasestorage.googleapis.com/v0/b/texaswebsite-13a01.appspot.com/o/promo.mp4?alt=media&token=3b5eafba-be60-46c9-a43c-35ba844f9283"
 				/>
+				<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 			</Head>
 			<Container maxWidth="xl" style={{ paddingBottom: "100px" }}>
 				<Grid container spacing={0}>
 					<Grid item xs={12} md={8} lg={8} xl={8}>
-						<Typography variant="h3" color="black.dark" className={styles.hero +' '+'animate__animated animate__backInLeft'}>
+						<Typography variant="h3" color="black.dark" className={styles.hero +' '+'animate__animated animate__bounceInLeft'}>
 							One Stop Textile Solutions And Services in Bangladesh
 						</Typography>
-						<Typography variant="h6" color="black.dark" className='animate__animated animate__backInLeft'>
+						<Typography variant="h6" color="black.dark" className='animate__animated animate__bounceInLeft'>
 							One Stop Textile Solutions And Services in Bangladesh
 						</Typography>
 					</Grid>
@@ -158,7 +163,7 @@ function Home({ brands }) {
 							xl={6}
 							
 						>
-
+							<div data-aos="fade-right">
 							<Typography variant="h6" color="secondary.dark" className={styles.padding100}>
 								OUR VALUES
 							</Typography>
@@ -169,10 +174,13 @@ function Home({ brands }) {
 							>
 								We creeate value from shipment to servicing.
 							</Typography>
-			
 							<span className="button1">
 								<Link href="#">Learn More</Link>
 							</span>
+							</div>
+
+			
+				
 						</Grid>
 						<Grid
 							item
@@ -182,6 +190,7 @@ function Home({ brands }) {
 							xl={6}
 
 						>
+							<div data-aos="fade-left">
 							<Typography variant="h4" color="secondary.dark" className={styles.padding100}>
 								Affordable Textile Solutions
 							</Typography>
@@ -203,6 +212,8 @@ function Home({ brands }) {
 							<Typography variant="body1" color="secondary.light" style={{paddingBottom:'100px'}}>
               We are commited and dedicated to our clients throughout their experience with us and beyond. 
 							</Typography>
+							</div>
+						
 						</Grid>
 					</Grid>
 				</Container>
@@ -218,7 +229,8 @@ function Home({ brands }) {
 							xl={6}
 							
 						>
-							<Typography variant="h6" color="secondary.dark" className={styles.padding100}>
+<div data-aos="fade-right">
+<Typography variant="h6" color="secondary.dark" className={styles.padding100}>
 			TESTIMONIALS
 							</Typography>
 							<Typography
@@ -234,6 +246,7 @@ function Home({ brands }) {
 							>
 Connecting you to the world’s leading Textile Solutions with top class service.
 							</Typography>
+</div>
 						</Grid>
             <Grid
 							item
@@ -243,7 +256,8 @@ Connecting you to the world’s leading Textile Solutions with top class service
 							xl={12}
 							
 						>
-									<Slider ref={sliders} {...settingss}>
+	<div data-aos="fade-right">
+	<Slider ref={sliders} {...settingss}>
 										<CardR />
 										<CardR />
 										<CardR />
@@ -257,6 +271,7 @@ Connecting you to the world’s leading Textile Solutions with top class service
 											<img src='/arrowR.svg' alt="" />
 										</span>
 									</div>
+	</div>
 						</Grid>
       </Grid>
       </Container>
