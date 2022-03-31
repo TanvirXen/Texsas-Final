@@ -3,7 +3,11 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Layout from "../Components/Layout";
 import 'animate.css';
 const outerTheme = createTheme({
-
+	breakpoints:{
+		values:{
+			xl:1300
+		}
+	},
 	palette: {
 		primary: {
 			main: "#0BBA60",
