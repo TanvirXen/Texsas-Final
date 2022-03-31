@@ -163,7 +163,7 @@ function Home({ brands }) {
 							xl={6}
 							
 						>
-							<div data-aos="fade-right">
+							<div data-aos="fade-right" data-aos-duration="2000">
 							<Typography variant="h6" color="secondary.dark" className={styles.padding100}>
 								OUR VALUES
 							</Typography>
@@ -190,7 +190,7 @@ function Home({ brands }) {
 							xl={6}
 
 						>
-							<div data-aos="fade-left">
+							<div data-aos="fade-left" data-aos-duration="2000">
 							<Typography variant="h4" color="secondary.dark" className={styles.padding100}>
 								Affordable Textile Solutions
 							</Typography>
@@ -229,7 +229,7 @@ function Home({ brands }) {
 							xl={6}
 							
 						>
-<div data-aos="fade-right">
+<div data-aos="fade-right" data-aos-duration="2000">
 <Typography variant="h6" color="secondary.dark" className={styles.padding100}>
 			TESTIMONIALS
 							</Typography>
@@ -256,7 +256,7 @@ Connecting you to the world’s leading Textile Solutions with top class service
 							xl={12}
 							
 						>
-	<div data-aos="fade-right">
+	<div data-aos="fade-right" data-aos-duration="2000">
 	<Slider ref={sliders} {...settingss}>
 										<CardR />
 										<CardR />
