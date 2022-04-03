@@ -6,7 +6,9 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import Grid from "@mui/material/Grid";
 import imageUrlFor from "../utils/imageUrlFor.js";
-export default function BrandCard({image,title,logo,description}) {
+
+
+export default function BlogCard({image,title,description,date}) {
   return (
     <Grid
     item
@@ -26,13 +28,13 @@ export default function BrandCard({image,title,logo,description}) {
           alt="brand logo"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+        <Typography variant="body2" color="black.dark">{date}</Typography>
+          <Typography gutterBottom variant="h3" component="div"  color="black.light">
            {title}
           </Typography>
           <Typography variant="body1" color="black.dark" className='texthide'  >
         {description}
           </Typography>
-          <img src={imageUrlFor(logo)}alt="Brandlogo" style={{height:'40px',width:'auto'}} />
         </CardContent>
       </CardActionArea>
     </Card>

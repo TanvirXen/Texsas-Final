@@ -26,7 +26,7 @@ return(
 			</Head>
     <div className="brandHero">
 <Container maxWidth="xl">
-<Typography variant="h3" color="secondary.dark" className={styles.hero+' '+'animate__animated animate__bounceInLeft'}>
+<Typography variant="h2" color="secondary.dark" className={styles.hero+' '+'animate__animated animate__bounceInLeft'}>
 Products
 </Typography>
 </Container>
@@ -47,7 +47,7 @@ direction="row"
   lg={3}
   xl={3}
 >
-<Accordion style={{marginRight:'10px',marginBottom:'10px',border: "none", boxShadow: "none" ,borderRadius:'0px'}}  elevation={0}         sx={{
+<Accordion style={{marginRight:'10px',marginBottom:'10px',border: "none", boxShadow: "none" ,borderRadius:'0px',width:"100%",paddingRight:"10px"}}  elevation={0}         sx={{
             '&:before': {
                 display: 'none',
             }
@@ -70,7 +70,7 @@ direction="row"
         </AccordionDetails>
 
       </Accordion>
-      <Accordion style={{marginRight:'10px',marginBottom:'10px',border: "none", boxShadow: "none" ,borderRadius:'0px',marginTop:'10px'}}  elevation={0}         sx={{
+      <Accordion style={{marginRight:'10px',marginBottom:'10px',border: "none", boxShadow: "none" ,borderRadius:'0px',marginTop:'10px',width:"100%",paddingRight:"10px"}}  elevation={0}         sx={{
             '&:before': {
                 display: 'none',
             }

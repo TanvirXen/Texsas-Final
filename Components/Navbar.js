@@ -99,7 +99,7 @@ function NavbarDesktop() {
 						alignItems="flex-start"
 						justifyContent="flex-start"
 					>
-						<span className="navText"><span><Link href="/contact"  > Get In Touch</Link> </span></span>
+					<Link href="/contact" passHref ><span className="navText"><span> Get In Touch </span></span></Link>
 					</Grid>
 				</Grid>
 			</Container>

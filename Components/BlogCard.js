@@ -6,36 +6,37 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import Grid from "@mui/material/Grid";
 import imageUrlFor from "../utils/imageUrlFor.js";
-export default function BrandCard({image,title,logo,description}) {
+
+
+export default function BLogCard({image,title,logo,description,date}) {
   return (
+    <Grid container spacing={1} direction="row">
+				    <Grid
+    item
+    xs={12}
+    sm={12}
+    md={5}
+    lg={7}
+    xl={7}
+  >
+  <img src={imageUrlFor(image)} alt="Blog Image" srcset="" style={{width:'100%',height:'auto'}} />
+
+    </Grid>
     <Grid
     item
     xs={12}
-    sm={6}
-    md={4}
-    lg={3}
-    xl={3}
+    sm={12}
+    md={7}
+    lg={5}
+    xl={5}
   >
-  
-    <Card sx={{ maxWidth: 345 }} style={{ border: "none", boxShadow: "none" ,borderRadius:'0px'}} >
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="250"
-          image={imageUrlFor(image)}
-          alt="brand logo"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-           {title}
-          </Typography>
-          <Typography variant="body1" color="black.dark" className='texthide'  >
-        {description}
-          </Typography>
-          <img src={imageUrlFor(logo)}alt="Brandlogo" style={{height:'50px',width:'auto'}} />
-        </CardContent>
-      </CardActionArea>
-    </Card>
+<div className='topPad'>
+<Typography variant="body2" color="black.light">{date}</Typography>
+  <Typography variant="h1" color="black.dark">{title}</Typography>
+  <Typography variant="body1" color="black.light" className='texthide'>{description}</Typography>
+</div>
     </Grid>
+    </Grid>
+
   );
 }

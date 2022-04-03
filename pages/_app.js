@@ -3,9 +3,14 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Layout from "../Components/Layout";
 import 'animate.css';
 const outerTheme = createTheme({
+
 	breakpoints:{
 		values:{
-			xl:1300
+			xs:0,
+			sm:600,
+			md:900,
+			lg:1100,
+			xl:1300,
 		}
 	},
 	palette: {
@@ -19,21 +24,42 @@ const outerTheme = createTheme({
 			dark: "#FFFFFF",
 		},
 		black:{
-			dark:'#313131'
+			dark:'#313131',
+			light:'#656565'
+		},
+		blue:{
+			light:'#526899'
 		}
 	},
 	typography: {
 		h1:{
-			fontFamily:`"Barracuda"`
+			fontFamily:`"Barracuda"`,
+			fontWeight: "700",
+			fontSize: "3rem",
+			'@media (max-width:1100px)': {
+				fontSize: "2.8rem"
+			  },
+			  '@media (max-width:900px)': {
+				fontSize: "2.6rem"
+			  },
+			  '@media (max-width:600px)': {
+				fontSize: "2.2rem"
+			  }
 		},
 		h2:{
-			fontFamily:`"Barracuda"`
+			fontFamily:`"Barracuda"`,
+			fontWeight: "700",
+			fontSize: "2.5rem",
 		},
 		h3:{
-			fontFamily:`"Barracuda"`
+			fontFamily:`"Barracuda"`,
+			fontWeight: "700",
+			fontSize: "24px",
 		},
 		h4:{
-			fontFamily:`"Barracuda"`
+			fontFamily:`"Barracuda"`,
+			fontWeight: "700",
+			fontSize: "1.5rem",
 		},
 		h5:{
 			fontFamily:`"Barracuda"`
@@ -42,10 +68,14 @@ const outerTheme = createTheme({
 			fontFamily:`"Raleway"`
 		},
 		body1:{
-			fontFamily:`"Raleway"`
+			fontFamily:`"Raleway"`,
+			fontWeight: "500",
+			fontSize: "1.25rem",
 		},
 		body2:{
-			fontFamily:`"Raleway"`
+			fontFamily:`"Raleway"`,
+			fontWeight: "500",
+			fontSize: "1rem",
 		}
 	},
 });

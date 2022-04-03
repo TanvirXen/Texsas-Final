@@ -77,14 +77,14 @@ function Home({ brands }) {
 					rel="preload"
 					as="video"
 					type="video/mp4"
-					href="https://firebasestorage.googleapis.com/v0/b/texaswebsite-13a01.appspot.com/o/promo.mp4?alt=media&token=3b5eafba-be60-46c9-a43c-35ba844f9283"
+					href="https://firebasestorage.googleapis.com/v0/b/texaswebsite-13a01.appspot.com/o/TEXSAS%20Landing.mp4?alt=media&token=b1067d96-1bbe-4993-ba9a-f33b6cba0260"
 				/>
 				<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 			</Head>
 			<Container maxWidth='xl' style={{ paddingBottom: "100px" }}>
 				<Grid container spacing={0}>
 					<Grid item xs={12} md={8} lg={8} xl={8}>
-						<Typography variant="h3" color="black.dark" className={styles.hero +' '+'animate__animated animate__bounceInLeft'}>
+						<Typography variant="h1" color="black.dark" className={styles.hero +' '+'animate__animated animate__bounceInLeft'}>
 							One Stop Textile Solutions And Services in Bangladesh
 						</Typography>
 						<Typography variant="h6" color="black.dark" className='animate__animated animate__bounceInLeft'>
@@ -119,7 +119,7 @@ function Home({ brands }) {
 									style={{ width: "100%", marginTop: "-160px" }}
 								>
 									<source
-										src="https://firebasestorage.googleapis.com/v0/b/texaswebsite-13a01.appspot.com/o/promo.mp4?alt=media&token=3b5eafba-be60-46c9-a43c-35ba844f9283"
+										src="https://firebasestorage.googleapis.com/v0/b/texaswebsite-13a01.appspot.com/o/TEXSAS%20Landing.mp4?alt=media&token=b1067d96-1bbe-4993-ba9a-f33b6cba0260"
 										type="video/mp4"
 									/>
 									Your browser does not support the video tag.
