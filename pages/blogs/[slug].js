@@ -12,6 +12,43 @@ function Blog(props) {
 	console.log(props.data.description);
 	return (
 		<div>
+			<Head>
+				<title>Texas- 	{props.data.title}</title>
+				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+				<link
+					rel="apple-touch-icon"
+					sizes="180x180"
+					href="/apple-touch-icon.png"
+				/>
+				<link
+					rel="icon"
+					type="image/png"
+					sizes="32x32"
+					href="/favicon-32x32.png"
+				/>
+				<link
+					rel="icon"
+					type="image/png"
+					sizes="16x16"
+					href="/favicon-16x16.png"
+				/>
+				<link rel="manifest" href="/site.webmanifest" />
+				<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+				<meta name="msapplication-TileColor" content="#da532c" />
+				<meta name="theme-color" content="#ffffff" />
+				<link rel="preconnect" href="https://vitals.vercel-insights.com" />
+				<link rel="preconnect" href="https://fonts.googleapis.com" />
+
+				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+				<meta property="og:type" content="website" />
+				<meta property="og:url" content="https://www.texsasbd.com/" />
+				<meta property="og:title" content="Texas- Blogs" />
+				<meta
+					property="og:description"
+					content="Connecting you to the world’s leading Textile Solutions with top class service."
+				/>
+				<meta property="og:image" content=	{props.data.images[0].asset} />
+			</Head>
 			<Container maxWidth="xl">
 				<Grid container spacing={1}>
 					<Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
