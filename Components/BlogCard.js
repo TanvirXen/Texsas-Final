@@ -6,11 +6,12 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import Grid from "@mui/material/Grid";
 import imageUrlFor from "../utils/imageUrlFor.js";
+import Link from "next/link";
 
-
-export default function BLogCard({image,title,logo,description,date}) {
+export default function BLogCard({image,title,description,date,slug}) {
   return (
-    <Grid container spacing={1} direction="row">
+    <Link href={'/blogs/'+slug} passHref>
+    <Grid container spacing={1} direction="row" className='ccder'>
 				    <Grid
     item
     xs={12}
@@ -19,7 +20,7 @@ export default function BLogCard({image,title,logo,description,date}) {
     lg={7}
     xl={7}
   >
-  <img src={imageUrlFor(image)} alt="Blog Image" srcset="" style={{width:'100%',height:'auto'}} />
+  <img src={imageUrlFor(image)} alt="Blog Image" style={{width:'100%',height:'auto'}} />
 
     </Grid>
     <Grid
@@ -37,6 +38,6 @@ export default function BLogCard({image,title,logo,description,date}) {
 </div>
     </Grid>
     </Grid>
-
+</Link>
   );
 }

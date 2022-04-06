@@ -6,9 +6,9 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import Grid from "@mui/material/Grid";
 import imageUrlFor from "../utils/imageUrlFor.js";
+import Link from "next/link";
 
-
-export default function BlogCard({image,title,description,date}) {
+export default function BlogCard({image,title,description,date,slug}) {
   return (
     <Grid
     item
@@ -18,8 +18,8 @@ export default function BlogCard({image,title,description,date}) {
     lg={4}
     xl={4}
   >
-  
-    <Card  style={{ border: "none", boxShadow: "none" ,borderRadius:'0px',width:'100%'}} >
+  <Link href={'/blogs/'+slug} passHref>
+  <Card  style={{ border: "none", boxShadow: "none" ,borderRadius:'0px',width:'100%'}} >
       <CardActionArea>
         <CardMedia
           component="img"
@@ -29,7 +29,7 @@ export default function BlogCard({image,title,description,date}) {
         />
         <CardContent>
         <Typography variant="body2" color="black.dark">{date}</Typography>
-          <Typography gutterBottom variant="h3" component="div"  color="black.light">
+          <Typography gutterBottom variant="h3" component="div"  color="black.dark">
            {title}
           </Typography>
           <Typography variant="body1" color="black.dark" className='texthide'  >
@@ -38,6 +38,8 @@ export default function BlogCard({image,title,description,date}) {
         </CardContent>
       </CardActionArea>
     </Card>
+  </Link>
+   
     </Grid>
   );
 }

@@ -45,7 +45,7 @@ html,
 body {
 	padding: 0;
 	margin: 0;
-	font-family: Barracuda;
+	font-family: Raleway;
 	overflow-x: hidden;
 }
 
@@ -61,6 +61,7 @@ a {
 }
 //Typography
 .navText {
+	font-family: 'Raleway';
 	text-decoration: none;
 	font-size: 18px;
 	color: $Primary;
@@ -131,8 +132,9 @@ ul {
 		justify-content: space-around;
 	}
 	ul a {
+		font-family: 'Raleway';
 		text-decoration: none;
-		font-size: 18px;
+		font-size: 16px;
 		color: $Black;
 		font-weight: bold;
 		text-transform: uppercase;
@@ -261,6 +263,19 @@ footer {
  }
 .topPad{
 	padding-top: 25%;
+}
+.ccder{
+	cursor: pointer;
+}
+.topspace{
+	padding-top: 60px;
+}
+.carousel .control-dots .dot {
+	background: $BlackS !important;
+}
+
+.padddowns{
+	padding-bottom: 60px;
 }
 @media only screen and (max-width: 1100px) {
 	.topPad{

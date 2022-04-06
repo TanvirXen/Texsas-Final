@@ -40,10 +40,45 @@ function Products({ blogs }) {
 	let data = Object.values(blogs);
 	let newData = Object.values(blogs);
 	newData.shift();
-	console.log(newData);
 	return (
 		<div>
-			<Head></Head>
+<Head>
+				<title>Texas- Blogs </title>
+				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+				<link
+					rel="apple-touch-icon"
+					sizes="180x180"
+					href="/apple-touch-icon.png"
+				/>
+				<link
+					rel="icon"
+					type="image/png"
+					sizes="32x32"
+					href="/favicon-32x32.png"
+				/>
+				<link
+					rel="icon"
+					type="image/png"
+					sizes="16x16"
+					href="/favicon-16x16.png"
+				/>
+				<link rel="manifest" href="/site.webmanifest" />
+				<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+				<meta name="msapplication-TileColor" content="#da532c" />
+				<meta name="theme-color" content="#ffffff" />
+				<link rel="preconnect" href="https://vitals.vercel-insights.com" />
+				<link rel="preconnect" href="https://fonts.googleapis.com" />
+
+				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+				<meta property="og:type" content="website" />
+				<meta property="og:url" content="https://www.texsasbd.com/" />
+				<meta property="og:title" content="Texas- Blogs" />
+				<meta
+					property="og:description"
+					content="Connecting you to the world’s leading Textile Solutions with top class service."
+				/>
+				<meta property="og:image" content='/meta.png' />
+			</Head>
 			{isBreakpoint ? (
  <div className="brandHero">
  <Container maxWidth="xl">
@@ -63,6 +98,7 @@ Blogs
 						date={data[0].date}
 						title={data[0].title}
 						description={data[0].description[0].children[0].text}
+						slug={data[0].slug.current}
 					/>
 				) : (
 					<BLogCard
@@ -70,6 +106,7 @@ Blogs
 						date={data[0].date}
 						title={data[0].title}
 						description={data[0].description[0].children[0].text}
+						slug={data[0].slug.current}
 					/>
 				)}
 			</Container>
@@ -83,6 +120,7 @@ Blogs
 								title={e.title}
 								description={e.description[0].children[0].text}
 								key={e.title}
+								slug={e.slug.current}
 							/>
 						);
 					})}

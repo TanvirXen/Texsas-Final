@@ -14,11 +14,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CardR from "../Components/TestimonialCard.js";
-import AOS from 'aos';
+import AOS from "aos";
 const brand = '*[_type=="brand"]';
 function Home({ brands }) {
 	const sliders = useRef(null);
-  var settingss = {
+	var settingss = {
 		dots: false,
 		infinite: false,
 		speed: 500,
@@ -68,7 +68,7 @@ function Home({ brands }) {
 	};
 	useEffect(() => {
 		AOS.init();
-	  }, []);
+	}, []);
 
 	return (
 		<div>
@@ -79,15 +79,82 @@ function Home({ brands }) {
 					type="video/mp4"
 					href="https://firebasestorage.googleapis.com/v0/b/texaswebsite-13a01.appspot.com/o/TEXSAS%20Landing.mp4?alt=media&token=b1067d96-1bbe-4993-ba9a-f33b6cba0260"
 				/>
-				<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+				<link
+					rel="preconnect"
+					href="https://firebasestorage.googleapis.com/v0/b/texaswebsite-13a01.appspot.com/o/TEXSAS%20Landing.mp4?alt=media&token=b1067d96-1bbe-4993-ba9a-f33b6cba0260"
+				/>
+				<link
+					href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+					rel="stylesheet"
+				/>
+				<title>Texas- Home </title>
+				<meta
+					name="google-site-verification"
+					content="NDv76VQOyFym8ToQYWj9HKlCdFr2_RQh1IiWlaWLEj4"
+				/>
+				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+				<link
+					rel="stylesheet"
+					type="text/css"
+					charset="UTF-8"
+					href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+				/>
+				<link
+					rel="stylesheet"
+					type="text/css"
+					href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+				/>
+				<link
+					rel="apple-touch-icon"
+					sizes="180x180"
+					href="/apple-touch-icon.png"
+				/>
+				<link
+					rel="icon"
+					type="image/png"
+					sizes="32x32"
+					href="/favicon-32x32.png"
+				/>
+				<link
+					rel="icon"
+					type="image/png"
+					sizes="16x16"
+					href="/favicon-16x16.png"
+				/>
+				<link rel="manifest" href="/site.webmanifest" />
+				<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+				<meta name="msapplication-TileColor" content="#da532c" />
+				<meta name="theme-color" content="#ffffff" />
+				<link rel="preconnect" href="https://vitals.vercel-insights.com" />
+				<link rel="preconnect" href="https://fonts.googleapis.com" />
+
+				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+				<meta property="og:type" content="website" />
+				<meta property="og:url" content="https://www.texsasbd.com/" />
+				<meta property="og:title" content="Texas- Home" />
+				<meta
+					property="og:description"
+					content="Connecting you to the world’s leading Textile Solutions with top class service."
+				/>
+				<meta property="og:image" content='/meta.png' />
 			</Head>
-			<Container maxWidth='xl' style={{ paddingBottom: "100px" }}>
+			<Container maxWidth="xl" style={{ paddingBottom: "100px" }}>
 				<Grid container spacing={0}>
 					<Grid item xs={12} md={8} lg={8} xl={8}>
-						<Typography variant="h1" color="black.dark" className={styles.hero +' '+'animate__animated animate__bounceInLeft'}>
+						<Typography
+							variant="h1"
+							color="black.dark"
+							className={
+								styles.hero + " " + "animate__animated animate__bounceInLeft"
+							}
+						>
 							One Stop Textile Solutions And Services in Bangladesh
 						</Typography>
-						<Typography variant="h6" color="black.dark" className='animate__animated animate__bounceInLeft'>
+						<Typography
+							variant="h6"
+							color="black.dark"
+							className="animate__animated animate__bounceInLeft"
+						>
 							One Stop Textile Solutions And Services in Bangladesh
 						</Typography>
 					</Grid>
@@ -129,7 +196,10 @@ function Home({ brands }) {
 					</Grid>
 				</Container>
 			</div>
-			<Container maxWidth="xl" style={{paddingBottom:'40px',paddingTop:'40px'}}>
+			<Container
+				maxWidth="xl"
+				style={{ paddingBottom: "40px", paddingTop: "40px" }}
+			>
 				<Marquee
 					duration={3000}
 					background="#ffffff"
@@ -155,128 +225,122 @@ function Home({ brands }) {
 			<div className="hero3">
 				<Container maxWidth="xl">
 					<Grid container spacing={2}>
-						<Grid
-							item
-							xs={12}
-							md={6}
-							lg={6}
-							xl={6}
-							
-						>
+						<Grid item xs={12} md={6} lg={6} xl={6}>
 							<div data-aos="fade-right" data-aos-duration="2000">
-							<Typography variant="h6" color="secondary.dark" className={styles.padding100}>
-								OUR VALUES
-							</Typography>
-							<Typography
-								variant="h3"
-								color="secondary.dark"
-								style={{ marginBottom: "28px" }}
-							>
-								We creeate value from shipment to servicing.
-							</Typography>
-							<span className="button1">
-								<Link href="#">Learn More</Link>
-							</span>
+								<Typography
+									variant="h6"
+									color="secondary.dark"
+									className={styles.padding100}
+								>
+									OUR VALUES
+								</Typography>
+								<Typography
+									variant="h3"
+									color="secondary.dark"
+									style={{ marginBottom: "28px" }}
+								>
+									We creeate value from shipment to servicing.
+								</Typography>
+								<span className="button1">
+									<Link href="#">Learn More</Link>
+								</span>
 							</div>
-
-			
-				
 						</Grid>
-						<Grid
-							item
-							xs={12}
-							md={6}
-							lg={6}
-							xl={6}
-
-						>
+						<Grid item xs={12} md={6} lg={6} xl={6}>
 							<div data-aos="fade-left" data-aos-duration="2000">
-							<Typography variant="h4" color="secondary.dark" className={styles.padding100}>
-								Affordable Textile Solutions
-							</Typography>
-							<Typography variant="body1" color="secondary.light" style={{paddingBottom:'40px'}}>
-								We promise to provide the best value for money among Textile
-								Solutions in Bangladesh.
-							</Typography>
+								<Typography
+									variant="h4"
+									color="secondary.dark"
+									className={styles.padding100}
+								>
+									Affordable Textile Solutions
+								</Typography>
+								<Typography
+									variant="body1"
+									color="secondary.light"
+									style={{ paddingBottom: "40px" }}
+								>
+									We promise to provide the best value for money among Textile
+									Solutions in Bangladesh.
+								</Typography>
 
-              <Typography variant="h4" color="secondary.dark">
-              Top Notch Service
-							</Typography>
-							<Typography variant="body1" color="secondary.light" style={{paddingBottom:'40px'}}>
-              Our team of professionals are standby to support you with world class service for your Textile machinaries.
-							</Typography>
+								<Typography variant="h4" color="secondary.dark">
+									Top Notch Service
+								</Typography>
+								<Typography
+									variant="body1"
+									color="secondary.light"
+									style={{ paddingBottom: "40px" }}
+								>
+									Our team of professionals are standby to support you with
+									world class service for your Textile machinaries.
+								</Typography>
 
-              <Typography variant="h4" color="secondary.dark">
-              Commitment and Dedication
-							</Typography>
-							<Typography variant="body1" color="secondary.light" style={{paddingBottom:'100px'}}>
-              We are commited and dedicated to our clients throughout their experience with us and beyond. 
-							</Typography>
+								<Typography variant="h4" color="secondary.dark">
+									Commitment and Dedication
+								</Typography>
+								<Typography
+									variant="body1"
+									color="secondary.light"
+									style={{ paddingBottom: "100px" }}
+								>
+									We are commited and dedicated to our clients throughout their
+									experience with us and beyond.
+								</Typography>
 							</div>
-						
 						</Grid>
 					</Grid>
 				</Container>
 			</div>
-      <div className="hero4">
-      <Container maxWidth="xl">
-      <Grid container spacing={0}>
-      <Grid
-							item
-							xs={12}
-							md={6}
-							lg={6}
-							xl={6}
-							
-						>
-<div data-aos="fade-right" data-aos-duration="2000">
-<Typography variant="h6" color="secondary.dark" className={styles.padding100}>
-			TESTIMONIALS
-							</Typography>
-							<Typography
-								variant="h3"
-								color="secondary.dark"
-							>
-					We are a reknowned name in the industry
-							</Typography>
-							<Typography
-								variant="h6"
-								color="secondary.dark"
-								style={{ marginBottom: "28px" }}
-							>
-Connecting you to the world’s leading Textile Solutions with top class service.
-							</Typography>
-</div>
+			<div className="hero4">
+				<Container maxWidth="xl">
+					<Grid container spacing={0}>
+						<Grid item xs={12} md={6} lg={6} xl={6}>
+							<div data-aos="fade-right" data-aos-duration="2000">
+								<Typography
+									variant="h6"
+									color="secondary.dark"
+									className={styles.padding100}
+								>
+									TESTIMONIALS
+								</Typography>
+								<Typography variant="h3" color="secondary.dark">
+									We are a reknowned name in the industry
+								</Typography>
+								<Typography
+									variant="h6"
+									color="secondary.dark"
+									style={{ marginBottom: "28px" }}
+								>
+									Connecting you to the world’s leading Textile Solutions with
+									top class service.
+								</Typography>
+							</div>
 						</Grid>
-            <Grid
-							item
-							xs={12}
-							md={12}
-							lg={12}
-							xl={12}
-							
-						>
-	<div data-aos="fade-right" data-aos-duration="2000">
-	<Slider ref={sliders} {...settingss}>
-										<CardR />
-										<CardR />
-										<CardR />
-										<CardR />
-									</Slider>
-									<div style={{ marginTop: "16px" ,paddingBottom:'100px'}} className="none">
-										<span onClick={() => sliders?.current?.slickPrev()}>
-											<img src='/arrowL.svg' alt="" />
-										</span>
-										<span onClick={() => sliders?.current?.slickNext()}>
-											<img src='/arrowR.svg' alt="" />
-										</span>
-									</div>
-	</div>
+						<Grid item xs={12} md={12} lg={12} xl={12}>
+							<div data-aos="fade-right" data-aos-duration="2000">
+								<Slider ref={sliders} {...settingss}>
+									<CardR />
+									<CardR />
+									<CardR />
+									<CardR />
+								</Slider>
+								<div
+									style={{ marginTop: "16px", paddingBottom: "100px" }}
+									className="none"
+								>
+									<span onClick={() => sliders?.current?.slickPrev()}>
+										<img src="/arrowL.svg" alt="" />
+									</span>
+									<span onClick={() => sliders?.current?.slickNext()}>
+										<img src="/arrowR.svg" alt="" />
+									</span>
+								</div>
+							</div>
 						</Grid>
-      </Grid>
-      </Container>
-      </div>
-
+					</Grid>
+				</Container>
+			</div>
 		</div>
 	);
 }

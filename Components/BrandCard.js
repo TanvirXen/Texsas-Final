@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import Grid from "@mui/material/Grid";
 import imageUrlFor from "../utils/imageUrlFor.js";
+import Link from "next/link";
 export default function BrandCard({image,title,category,origin}) {
   return (
     <Grid
@@ -16,6 +17,7 @@ export default function BrandCard({image,title,category,origin}) {
     lg={3}
     xl={3}
   >
+        <Link href={'/brands/'+title} passHref>
     <Card sx={{ maxWidth: 345 }} style={{ border: "none" ,borderRadius:'0px'}}>
       <CardActionArea>
         <CardMedia
@@ -38,6 +40,7 @@ export default function BrandCard({image,title,category,origin}) {
         </CardContent>
       </CardActionArea>
     </Card>
+    </Link>
     </Grid>
   );
 }
