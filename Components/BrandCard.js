@@ -32,10 +32,10 @@ export default function BrandCard({image,title,category,origin}) {
            {title}
           </Typography>
           <Typography variant="body1" color="black.dark"  style={{display:'flex'}} >
-<span><img src="/category.svg" alt="icon" style={{height:'24px'}} /></span> <span style={{paddingTop:'2px',paddingLeft:'2px'}} >{origin}</span>
+<span><img src="/origin.svg" alt="icon" style={{height:'24px'}} /></span> <span style={{paddingTop:'2px',paddingLeft:'2px'}} >{origin}</span>
           </Typography>
           <Typography variant="body1" color="black.dark" style={{display:'flex'}} >
-<span><img src="/origin.svg" alt="icon" style={{height:'24px'}} /></span> <span style={{paddingTop:'2px',paddingLeft:'2px'}} > {category}</span>
+<span><img src="/category.svg" alt="icon" style={{height:'24px'}} /></span> <span style={{paddingTop:'2px',paddingLeft:'2px'}} > {category}</span>
           </Typography>
         </CardContent>
       </CardActionArea>

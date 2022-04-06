@@ -9,6 +9,10 @@
     padding-top: 70px;
     padding-bottom: 70px;
 }
+.hero11{
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
 .padd{
     padding-bottom: 40px;
 }
@@ -20,6 +24,17 @@
 }
 .ber{
     padding-bottom: 70px;
+}
+.img{
+    width: 100%;
+    height: auto;
+    box-shadow: (0px 2px 8px rgba(0, 0, 0, 0.08));
+}
+.left{
+    align-items: flex-start;
+}
+.pd1{
+    padding-top: 12px;
 }
 @media only screen and (max-width: 600px) {
     .hero1{
