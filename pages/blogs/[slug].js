@@ -47,7 +47,7 @@ function Blog(props) {
 					property="og:description"
 					content="Connecting you to the world’s leading Textile Solutions with top class service."
 				/>
-				<meta property="og:image" content=	{props.data.images[0].asset} />
+				<meta property="og:image" content=	{imageUrlFor(props.data.images[0].asset)} />
 			</Head>
 			<Container maxWidth="xl">
 				<Grid container spacing={1}>
