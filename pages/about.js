@@ -15,7 +15,7 @@ export default function About() {
 	return (
 		<div>
 									<Head>
-				<title>Texas- About </title>
+				<title>TEXSAS- About </title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<link
 					rel="apple-touch-icon"

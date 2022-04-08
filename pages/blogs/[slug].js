@@ -13,7 +13,7 @@ function Blog(props) {
 	return (
 		<div>
 			<Head>
-				<title>Texas- 	{props.data.title}</title>
+				<title>TEXSAS- 	{props.data.title}</title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<link
 					rel="apple-touch-icon"
@@ -41,8 +41,8 @@ function Blog(props) {
 
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<meta property="og:type" content="website" />
-				<meta property="og:url" content="https://www.texsasbd.com/" />
-				<meta property="og:title" content="Texas- Blogs" />
+				<meta property="og:url" content={"https://www.texsasbd.com/"+props.data.slug} />
+				<meta property="og:title" content={	"TEXSAS-"+props.data.title} />
 				<meta
 					property="og:description"
 					content="Connecting you to the world’s leading Textile Solutions with top class service."

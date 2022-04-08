@@ -80,7 +80,7 @@ function Brands(props) {
 	return (
 		<div>
 			<Head>
-				<title>Texas- {props.data.name} </title>
+				<title>TEXSAS- {props.data.name} </title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<link
 					rel="apple-touch-icon"
@@ -112,7 +112,7 @@ function Brands(props) {
 					property="og:url"
 					content={"https://www.texsasbd.com/brands/" + props.data.name}
 				/>
-				<meta property="og:title" content="Texas- Brands" />
+				<meta property="og:title" content={"TEXSAS-"+props.data.name }/>
 				<meta property="og:description" content={props.data.sdescription} />
 				<meta
 					property="og:image"

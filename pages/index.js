@@ -87,7 +87,7 @@ function Home({ brands }) {
 					href="https://unpkg.com/aos@2.3.1/dist/aos.css"
 					rel="stylesheet"
 				/>
-				<title>Texas- Home </title>
+				<title>TEXSAS- Home </title>
 				<meta
 					name="google-site-verification"
 					content="NDv76VQOyFym8ToQYWj9HKlCdFr2_RQh1IiWlaWLEj4"

@@ -28,7 +28,7 @@ export default function BrandCard({image,title,category,origin}) {
         style={{boxShadow:'0px 1px 0px #CDCDCD'}}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography gutterBottom variant="h3" component="div">
            {title}
           </Typography>
           <Typography variant="body1" color="black.dark"  style={{display:'flex'}} >

@@ -12,7 +12,7 @@ function Brands({brands}){
 return(
 <div>
 <Head>
-				<title>Texas- Brands </title>
+				<title>TEXSAS- Brands </title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<link
 					rel="apple-touch-icon"

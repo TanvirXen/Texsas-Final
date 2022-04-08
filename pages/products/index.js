@@ -22,7 +22,7 @@ function Products({products}){
 return(
 <div>
 <Head>
-				<title>Texas- Products </title>
+				<title>TEXSAS- Products </title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<link
 					rel="apple-touch-icon"
@@ -140,7 +140,7 @@ direction="row"
 >
   {data.map((e)=>{
     return(
-<ProductCard image={e.mainImage} key={e.model} title={e.model} description={e.description[0].children[0].text} logo={e.brand.logo}/>
+<ProductCard image={e.mainImage} key={e.model} title={e.model} description={e.description[0].children[0].text} logo={e.brand.logo} slug={e.slug.current}/>
     )
   })}
 

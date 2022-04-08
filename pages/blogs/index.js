@@ -43,7 +43,7 @@ function Products({ blogs }) {
 	return (
 		<div>
 <Head>
-				<title>Texas- Blogs </title>
+				<title>TEXSAS- Blogs </title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<link
 					rel="apple-touch-icon"

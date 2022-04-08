@@ -7,7 +7,7 @@ export default function Terms() {
 	return (
 	<Container maxWidth="xl">
 			<Head>
-				<title>Texas- Terms Of Service </title>
+				<title>TEXSAS- Terms Of Service </title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<link
 					rel="apple-touch-icon"

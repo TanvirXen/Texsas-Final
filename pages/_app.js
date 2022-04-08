@@ -33,7 +33,7 @@ const outerTheme = createTheme({
 	},
 	typography: {
 		h1:{
-			fontFamily:`"Barracuda"`,
+			fontFamily:`"Raleway"`,
 			fontWeight: "700",
 			fontSize: "3rem",
 			'@media (max-width:1100px)': {
@@ -44,25 +44,29 @@ const outerTheme = createTheme({
 			  },
 			  '@media (max-width:600px)': {
 				fontSize: "2.2rem"
-			  }
+			  },
+			  '@media (max-width:430px)': {
+				fontSize: "1.8rem"
+			  },
 		},
 		h2:{
-			fontFamily:`"Barracuda"`,
+			fontFamily:`"Raleway"`,
 			fontWeight: "700",
 			fontSize: "2.5rem",
 		},
 		h3:{
-			fontFamily:`"Barracuda"`,
+			fontFamily:`"Raleway"`,
 			fontWeight: "700",
 			fontSize: "24px",
+	
 		},
 		h4:{
-			fontFamily:`"Barracuda"`,
+			fontFamily:`"Raleway"`,
 			fontWeight: "700",
 			fontSize: "1.5rem",
 		},
 		h5:{
-			fontFamily:`"Barracuda"`
+			fontFamily:`"Raleway"`
 		},
 		h6:{
 			fontFamily:`"Raleway"`

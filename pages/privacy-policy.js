@@ -7,7 +7,7 @@ export default function Privacy() {
 	return (
 		<div>
 						<Head>
-				<title>Texas- Privacy Policy </title>
+				<title>TEXSAS- Privacy Policy </title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<link
 					rel="apple-touch-icon"
