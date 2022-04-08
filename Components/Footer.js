@@ -160,6 +160,7 @@ function FooterW() {
 						justifyContent="flex-start"
 					>
 						<div style={{ display: "flex" }}>
+						<Link href='/privacy-policy' passHref >
 							<Typography
 								variant="body2"
 								color="secondary.light"
@@ -167,17 +168,21 @@ function FooterW() {
 									opacity: "0.64",
 									paddingTop: "8px",
 									paddingRight: "8px",
+									cursor:'pointer'
 								}}
 							>
 								PRIVACY POLICY
 							</Typography>
+							</Link>
+							<Link href='/terms-of-service' passHref >
 							<Typography
 								variant="body2"
 								color="secondary.light"
-								style={{ opacity: "0.64", paddingTop: "8px" }}
+								style={{ opacity: "0.64", paddingTop: "8px" ,cursor:'pointer'}}
 							>
 								TERMS OF SERVICE
 							</Typography>
+							</Link>
 						</div>
 					</Grid>
 				</Grid>
@@ -290,6 +295,7 @@ function FooterM() {
 						justifyContent="flex-start"
 					>
 						<div style={{ display: "flex" }}>
+							<Link href='/privacy-policy' passHref >
 							<Typography
 								variant="body2"
 								color="secondary.light"
@@ -297,17 +303,21 @@ function FooterM() {
 									opacity: "0.64",
 									paddingTop: "8px",
 									paddingRight: "8px",
+									cursor:'pointer'
 								}}
 							>
 								PRIVACY POLICY
 							</Typography>
+							</Link>
+							<Link href='/terms-of-service' passHref style={{cursor:'pointer'}}>
 							<Typography
 								variant="body2"
 								color="secondary.light"
-								style={{ opacity: "0.64", paddingTop: "8px" }}
+								style={{ opacity: "0.64", paddingTop: "8px" ,cursor:'pointer'}}
 							>
 								TERMS OF SERVICE
 							</Typography>
+							</Link>
 						</div>
 					</Grid>
 					<Grid

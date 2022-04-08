@@ -56,7 +56,7 @@ Brands
 </Container>
 
     </div>
-    <Container maxWidth="xl" className={styles.hero1}>
+    <Container maxWidth="xl" className={styles.hero1} style={{paddingBottom:'40px'}}>
 <Grid
 
   container 

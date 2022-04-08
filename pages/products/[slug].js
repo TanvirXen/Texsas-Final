@@ -116,7 +116,7 @@ function Products(props) {
 					</Grid>
 				</Grid>
 			</Container>
-			<Container maxWidth="xl">
+			<Container maxWidth="xl" style={{paddingBottom:'40px'}}>
 				<Grid
 					container
 					spacing={1}
@@ -142,7 +142,7 @@ function Products(props) {
 					{e.name}
 						</Typography>
 					</Grid>
-					<Grid item xs={12} sm={8} md={9} lg={9} xl={9}>
+					<Grid item xs={12} sm={8} md={9} lg={9} xl={9} >
 					<PortableText value={e.description[0]}    />
 					</Grid>
 							</Grid>
