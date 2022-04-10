@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint"
   },
@@ -20,6 +21,7 @@
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
     "next": "12.1.2",
+    "next-sitemap": "^2.5.19",
     "react": "17.0.2",
     "react-animate-on-scroll": "^2.1.5",
     "react-calendly": "^3.0.1",
