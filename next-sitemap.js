@@ -2,8 +2,8 @@
 
 module.exports = {
     siteUrl: 'https://texsasbd.com',
-    changefreq: 'daily',
-    priority: 0.7,
+    changefreq: 'monthly',
+    priority: 1,
     sitemapSize: 5000,
     generateRobotsTxt: true,
     exclude: ['/protected-page', '/awesome/secret-page'],
