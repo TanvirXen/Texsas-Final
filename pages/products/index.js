@@ -90,7 +90,7 @@ direction="row"
           expandIcon={<ExpandMoreIcon style={{color:'#0BBA60'}}/>}
           aria-controls="panel1a-content"
           id="panel1a-header"
-          style={{borderBottom:'2px solid #D0D0D0',boxShadow: "none",width:'97%'}}
+          style={{borderBottom:'2px solid #D0D0D0',boxShadow: "none",width:'80%'}}
         >
           <Typography variant='body1'>Sort By Brand</Typography>
         </AccordionSummary>
@@ -113,7 +113,7 @@ direction="row"
           expandIcon={<ExpandMoreIcon style={{color:'#0BBA60'}} />}
           aria-controls="panel1a-content"
           id="panel1a-header"
-          style={{borderBottom:'2px solid #D0D0D0',boxShadow: "none",width:'97%'}}
+          style={{borderBottom:'2px solid #D0D0D0',boxShadow: "none",width:'80%'}}
         >
           <Typography variant='body1'>Sort By Category</Typography>
         </AccordionSummary>
