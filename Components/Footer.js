@@ -92,7 +92,7 @@ function FooterW() {
 							</Typography>
 						</a>
 						<span className="button1">
-							<Link href="#">Get In Touch</Link>
+							<Link href="/contact">Get In Touch</Link>
 						</span>
 					</Grid>
 					<Grid
@@ -247,7 +247,7 @@ function FooterM() {
 							</Typography>
 						</a>
 						<span className="button1">
-							<Link href="#">Get In Touch</Link>
+							<Link href="/contact">Get In Touch</Link>
 						</span>
 					</Grid>
 					<Grid
