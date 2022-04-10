@@ -201,7 +201,7 @@ function Home({ brands }) {
 				style={{ paddingBottom: "40px", paddingTop: "40px" }}
 			>
 				<Marquee
-					duration={3000}
+					duration={6000}
 					background="#ffffff"
 					height="220px"
 					width="100%"
@@ -224,18 +224,18 @@ function Home({ brands }) {
 			</Container>
 			<div className="hero3">
 				<Container maxWidth="xl">
-					<Grid container spacing={2}>
+					<Grid container spacing={5}>
 						<Grid item xs={12} md={6} lg={6} xl={6}>
 							<div data-aos="fade-right" data-aos-duration="2000">
 								<Typography
-									variant="h6"
+									variant="body2"
 									color="secondary.dark"
 									className={styles.padding100}
 								>
 									OUR VALUES
 								</Typography>
 								<Typography
-									variant="h3"
+									variant="h2"
 									color="secondary.dark"
 									style={{ marginBottom: "28px" }}
 								>
@@ -298,13 +298,13 @@ function Home({ brands }) {
 						<Grid item xs={12} md={6} lg={6} xl={6}>
 							<div data-aos="fade-right" data-aos-duration="2000">
 								<Typography
-									variant="h6"
+									variant="body2"
 									color="secondary.dark"
 									className={styles.padding100}
 								>
 									TESTIMONIALS
 								</Typography>
-								<Typography variant="h3" color="secondary.dark">
+								<Typography variant="h2" color="secondary.dark">
 									We are a reknowned name in the industry
 								</Typography>
 								<Typography

@@ -9,7 +9,6 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { PortableText } from "@portabletext/react";
 const blog = '*[_type=="product"]';
 function Products(props) {
-	console.log(props.data);
 	return (
 		<div>
 				<Head>
@@ -56,7 +55,7 @@ function Products(props) {
 					direction="row"
 					style={{ paddingTop: "40px" }}
 				>
-					<Grid item xs={8} sm={8} md={8} lg={8} xl={8}>
+					<Grid item xs={8} sm={8} md={8} lg={8} xl={8} style={{paddingBottom:'20px' }}>
 						<Typography variant="h1" color="black.dark">
 							{props.data.model}
 						</Typography>
@@ -68,7 +67,7 @@ function Products(props) {
 						md={4}
 						lg={4}
 						xl={4}
-						style={{ display: "flex", justifyContent: "flex-end" }}
+						style={{ display: "flex", justifyContent: "flex-end",paddingBottom:'20px'  }}
 					>
 						<img
 							src={imageUrlFor(props.data.brand.logo)}
@@ -76,7 +75,7 @@ function Products(props) {
 							className="respImg"
 						/>
 					</Grid>
-					<Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+					<Grid item xs={12} sm={12} md={12} lg={12} xl={12} >
 						<Carousel
 							showStatus={false}
 							swipeable={true}
@@ -103,7 +102,7 @@ function Products(props) {
 					container
 					spacing={1}
 					direction="row"
-					style={{ paddingTop: "40px" }}
+					style={{ paddingTop: "40px"}}
 				>
 					<Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
 						<Typography variant="body2" color="initial">
@@ -136,6 +135,7 @@ function Products(props) {
 							direction="row"
 							style={{ paddingTop: "40px" }}
 							key={e.key}
+							className='bdrProduct'
 						>
 												<Grid item xs={12} sm={4} md={3} lg={3} xl={3}>
 						<Typography variant="body2" color="black.light">

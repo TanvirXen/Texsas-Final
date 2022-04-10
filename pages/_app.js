@@ -80,8 +80,10 @@ const outerTheme = createTheme({
 			fontFamily:`"Raleway"`,
 			fontWeight: "500",
 			fontSize: "1rem",
+			lineHeight:'1.3rem'
 		}
 	},
+	
 });
 
 function MyApp({ Component, pageProps }) {

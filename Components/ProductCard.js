@@ -33,7 +33,7 @@ export default function BrandCard({image,title,logo,description,slug}) {
           <Typography variant="body1" color="black.dark" className='texthide'  >
         {description}
           </Typography>
-          <img src={imageUrlFor(logo)}alt="Brandlogo" style={{height:'40px',width:'auto'}} />
+          <img src={imageUrlFor(logo)}alt="Brandlogo" style={{height:'40px',width:'auto',marginTop:'8px'}} />
         </CardContent>
       </CardActionArea>
     </Card>

@@ -66,7 +66,7 @@ export default function About() {
 								Bangladesh
 							</Typography>
 							<Typography
-								variant="body1"
+								variant="body2"
 								color="secondary.dark"
 								className={
 									styles.heros + " " + "animate__animated animate__bounceInLeft"
@@ -105,6 +105,7 @@ export default function About() {
                             <Typography
 								variant="body2"
 								color="blue.light"
+								style={{marginTop:'8px'}}
 					
 							>
 					We are a professional Trading Company for Supplying dyeing, printing and finishing machinery along with all type of printing auxiliary materials.
@@ -131,12 +132,13 @@ export default function About() {
 								className={
 									"animate__animated animate__bounceInLeft"
 								}
+								style={{paddingBottom:'40px'}}
 							>
 					We are consistent on our mission to bring you the best Textile Solutions and Services.
 							</Typography>
 
 					</Grid>
-                    <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
+                    <Grid item xs={12} sm={12} md={4} lg={4} xl={4} >
                     <Typography
 								variant="h3"
 								color="black.dark"
@@ -267,6 +269,7 @@ OUR MACHINES AND PROVIDING AFTER SALES SERVICE SUCESSFULLY.
 								variant="body2"
 								color="blue.light"
                                 className={styles.ber}
+								style={{marginTop:'8px'}}
 							>
 				We are a professional Trading Company for Supplying dyeing, printing and finishing machinery along with all type of printing auxiliary materials.
 							</Typography>

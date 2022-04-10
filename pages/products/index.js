@@ -92,13 +92,13 @@ direction="row"
           id="panel1a-header"
           style={{borderBottom:'2px solid #D0D0D0',boxShadow: "none",width:'97%'}}
         >
-          <Typography variant='h5'>Sort By Brand</Typography>
+          <Typography variant='body1'>Sort By Brand</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography  color="primary.main" variant='h6' style={{boxShadow:' 0px 2px 0px #D0D0D0',paddingBottom:'3px' ,paddingTop:'3px'}}>
+          <Typography  color="primary.main" variant='h6' style={{boxShadow:' 0px 2px 0px #D0D0D0',paddingBottom:'3px' ,paddingTop:'3px',paddingLeft:'16px'}}>
         Found
           </Typography>
-          <Typography color="primary.main" variant='h6' style={{boxShadow:' 0px 2px 0px #D0D0D0' ,paddingBottom:'3px' ,paddingTop:'3px'}}>
+          <Typography color="primary.main" variant='h6' style={{boxShadow:' 0px 2px 0px #D0D0D0' ,paddingBottom:'3px' ,paddingTop:'3px',paddingLeft:'16px'}}>
         Homer
           </Typography>
         </AccordionDetails>
@@ -115,14 +115,14 @@ direction="row"
           id="panel1a-header"
           style={{borderBottom:'2px solid #D0D0D0',boxShadow: "none",width:'97%'}}
         >
-          <Typography variant='h5'>Sort By Category</Typography>
+          <Typography variant='body1'>Sort By Category</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography  color="primary.main" variant='h6' style={{boxShadow:' 0px 2px 0px #D0D0D0',paddingBottom:'3px' ,paddingTop:'3px'}}>
-        Printing Machines
+          <Typography  color="primary.main" variant='body2' style={{boxShadow:' 0px 2px 0px #D0D0D0',paddingBottom:'3px' ,paddingTop:'8px',paddingLeft:'16px'}}>
+      PRINTING MACHINES
           </Typography>
-          <Typography color="primary.main" variant='h6' style={{boxShadow:' 0px 2px 0px #D0D0D0' ,paddingBottom:'3px' ,paddingTop:'3px'}}>
-        Photoshop
+          <Typography color="primary.main" variant='body2' style={{boxShadow:' 0px 2px 0px #D0D0D0' ,paddingBottom:'3px' ,paddingTop:'8px',paddingLeft:'16px'}}>
+     PHOTOSHOP
           </Typography>
         </AccordionDetails>
       </Accordion>
