@@ -96,7 +96,7 @@ const [selectedB, setselectedB] = useState('')
 					</Typography>
 				</Container>
 			</div>
-			<Container maxWidth="xl" className={styles.hero1}>
+			<Container maxWidth="xl" className={styles.hero1}  style={{paddingBottom:'40px'}}>
 				<Grid container spacing={1} direction="row">
 					<Grid xs={12} sm={12} md={4} lg={3} xl={3}>
 						<Accordion

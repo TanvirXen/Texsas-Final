@@ -65,7 +65,7 @@ function Gallery(props) {
 					</Grid>
 				</Container>
 			</div>
-			<Container maxWidth="xl">
+			<Container maxWidth="xl" style={{paddingBottom:'40px'}}>
 				{props.card.map((s) => {
 					return (
 						<div key={s.title}>
