@@ -9,6 +9,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { PortableText } from "@portabletext/react";
 const blog = '*[_type=="product"]';
 function Products(props) {
+	console.log(props.data)
 	return (
 		<div>
 				<Head>
@@ -42,6 +43,7 @@ function Products(props) {
 				<meta property="og:type" content="website" />
 				<meta property="og:url" content={"https://www.texsasbd.com/products/"+props.data.slug.current} />
 				<meta property="og:title" content={"TEXSAS-"+props.data.model} />
+				<meta name = "keywords" content = {"Texsas, Texsas Engineering,Textile Machines Bangladesh,Textile Bangladesh,Textile Machines BD,Texsas BD,Texsas Bangladesh,"+props.data.keywords} />
 				<meta
 					property="og:description"
 					content={props.data.sdescription}

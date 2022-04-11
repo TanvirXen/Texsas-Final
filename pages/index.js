@@ -231,6 +231,7 @@ sort()
 				<meta property="og:type" content="website" />
 				<meta property="og:url" content="https://www.texsasbd.com/" />
 				<meta property="og:title" content="TEXSAS- Home" />
+				<meta name = "keywords" content = "Texsas, Texsas Engineering,Textile Machines Bangladesh,Textile Bangladesh,Textile Machines BD,Texsas BD,Texsas Bangladesh" />
 				<meta
 					property="og:description"
 					content="Connecting you to the world’s leading Textile Solutions with top class service."

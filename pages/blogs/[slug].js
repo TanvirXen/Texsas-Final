@@ -9,7 +9,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { PortableText } from "@portabletext/react";
 import imageUrlFor from "../../utils/imageUrlFor.js";
 function Blog(props) {
-	console.log(props.data.description);
+	console.log(props.data);
 	return (
 		<div>
 			<Head>
@@ -43,6 +43,7 @@ function Blog(props) {
 				<meta property="og:type" content="website" />
 				<meta property="og:url" content={"https://www.texsasbd.com/"+props.data.slug.current} />
 				<meta property="og:title" content={	"TEXSAS-"+props.data.title} />
+				<meta name = "keywords" content = {"Texsas, Texsas Engineering,Textile Machines Bangladesh,Textile Bangladesh,Textile Machines BD,Texsas BD,Texsas Bangladesh,"+props.data.keywords} />
 				<meta
 					property="og:description"
 					content="Connecting you to the world’s leading Textile Solutions with top class service."

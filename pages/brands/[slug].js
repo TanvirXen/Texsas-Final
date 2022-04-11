@@ -15,7 +15,7 @@ import ProductCard from "../../Components/ProductCardS";
 import { useState, useCallback, useEffect, useRef } from "react";
 const blog = '*[_type=="brand"]';
 function Brands(props) {
-	console.log(props.card);
+	console.log(props);
 	const sliders = useRef(null);
 	var settingss = {
 		dots: false,
@@ -112,6 +112,7 @@ function Brands(props) {
 					property="og:url"
 					content={"https://www.texsasbd.com/brands/" + props.data.name}
 				/>
+					<meta name = "keywords" content = {"Texsas, Texsas Engineering,Textile Machines Bangladesh,Textile Bangladesh,Textile Machines BD,Texsas BD,Texsas Bangladesh,"+props.data.keyword} />
 				<meta property="og:title" content={"TEXSAS-"+props.data.name }/>
 				<meta property="og:description" content={props.data.sdescription} />
 				<meta

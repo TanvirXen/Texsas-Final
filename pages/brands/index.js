@@ -40,8 +40,9 @@ return(
 
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<meta property="og:type" content="website" />
-				<meta property="og:url" content="https://www.texsasbd.com/" />
-				<meta property="og:title" content="Texas- Brands" />
+				<meta property="og:url" content="https://www.texsasbd.com/brands" />
+				<meta property="og:title" content="TEXSAS- Brands" />
+				<meta name = "keywords" content = "Texsas, Texsas Engineering,Textile Machines Bangladesh,Textile Bangladesh,Textile Machines BD,Texsas BD,Texsas Bangladesh" />
 				<meta
 					property="og:description"
 					content="Connecting you to the world’s leading Textile Solutions with top class service."
