@@ -17,6 +17,14 @@ $WhiteSS: rgba(225, 230, 237, 0.64);
 a {
 	text-decoration: none;
 }
+.unknown__pt__mark__sup{
+    vertical-align: super;
+    font-size: smaller;
+}
+.unknown__pt__mark__sub{
+    vertical-align: sub;
+    font-size: smaller;
+}
 //Typography
 .navText {
 	font-family: 'Inter';
