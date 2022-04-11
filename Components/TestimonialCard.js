@@ -12,7 +12,7 @@ export default function CardR({description,logo}){
 {description}
             </Typography>
 
-        <div className="logoArea">    <img src={logo} alt="" style={{paddingTop:'18px',height:'auto',width:'auto'}} /></div>
+        <div className="logoArea">    <img src={logo} alt="" style={{paddingTop:'18px',height:'auto',width:'auto',paddingBottom:'18px'}} /></div>
         </CardContent>
         </Card>
     )

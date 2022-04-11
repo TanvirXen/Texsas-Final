@@ -190,6 +190,8 @@ footer {
 	padding: 12px;
 	margin-right: 12px;
 	border-radius: 0px;
+	height: 420px;
+	min-width: 300px;
 }
 .padding100T {
 	padding-top: 100px;
@@ -255,9 +257,6 @@ p {
 }
 .textArea {
 	min-height: 125px;
-}
-.logoArea {
-	min-height: 130px;
 }
 .special {
 	display: flex !important;

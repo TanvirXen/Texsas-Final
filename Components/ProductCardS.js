@@ -11,7 +11,7 @@ export default function BrandCard({image,title,logo,description,slug}) {
   return (
 
     <Link href={'/products/'+slug} passHref>
-    <Card  style={{ border: "none", boxShadow: "none" ,borderRadius:'0px',cursor:'pointer',paddingLeft:'16px',paddingTop:'24px'}} >
+    <Card  style={{ border: "none", boxShadow: "none" ,borderRadius:'0px',cursor:'pointer',paddingLeft:'16px',paddingTop:'24px'}} className='TESTCARD' >
       <CardActionArea>
         <CardMedia
           component="img"
