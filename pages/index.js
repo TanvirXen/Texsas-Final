@@ -64,7 +64,7 @@ function Home(props) {
 						slidesToShow: 5,
 						slidesToScroll: 2,
 						arrows: false,
-						initialSlide: 2,
+						initialSlide: 5,
 					},
 				},
 				{
@@ -76,7 +76,7 @@ function Home(props) {
 						slidesToShow: 4,
 						slidesToScroll: 1,
 						arrows: false,
-						initialSlide: 1.8,
+						initialSlide: 4,
 					},
 				},
 				{
@@ -88,7 +88,7 @@ function Home(props) {
 						slidesToShow: 2.9,
 						slidesToScroll: 1,
 						arrows: false,
-						initialSlide: 1.8,
+						initialSlide: 2.9,
 					},
 				},
 				{
@@ -100,7 +100,7 @@ function Home(props) {
 						slidesToShow: 2.1,
 						slidesToScroll: 1,
 						arrows: false,
-						initialSlide: 1.3,
+						initialSlide: 2.1,
 					},
 				},
 			],
@@ -517,18 +517,25 @@ function Home(props) {
 						<Grid item xs={12} md={12} lg={12} xl={12}>
 						<div>
 						<Slider ref={slider} {...settings}>
-							{data.map((e) => {
-								return (
-									<ProductCard
-										image={e.mainImage}
-										key={e.model}
-										title={e.model}
-										description={e.description[0].children[0].text}
-										logo={e.brand.logo}
-										slug={e.slug.current}
-									/>
-								);
-							})}
+						{data.length==0? <div>
+<Typography variant="h3" color="initial" style={{paddingLeft:'30px',paddingBottom:'50px',paddingTop:'50px'}}>No Products Found</Typography>
+						</div>:
+					data.map((e) => {
+						return (
+							<ProductCard
+								image={e.mainImage}
+								key={e.model}
+								title={e.model}
+								description={e.description[0].children[0].text}
+								logo={e.brand.logo}
+								slug={e.slug.current}
+							/>
+						);
+					})
+						
+						
+}
+						
 						</Slider>
 						<div
 							style={{ marginTop: "16px", paddingBottom: "100px" }}
