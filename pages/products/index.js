@@ -18,27 +18,28 @@ const brand = '*[_type=="brand"]';
 function Products(props) {
 	let data = Object.values(props.products);
 const [datas, setdatas] = useState(data)
-
-	// function sortC(e) {
-	// 	let s = [];
-	// 	data.filter((element) => {
-	// 		for (let i = 0; i < element.category.length; i++) {
-	// 			if (element.category[i].title == e) {
-	// 				s.push(element);
-	// 			}
-	// 		}
-	// 	});
-  //   setdatas(s)
-	// }
-	// function sortB(e) {
-	// 	let s = [];
-	// 	data.filter((element) => {
-	// 		if (element.brand.name == e) {
-	// 			s.push(element);
-	// 		}
-	// 	});
-  //   setdatas(s)
-	// }
+const [selectedC, setselectedC] = useState('')
+const [selectedB, setselectedB] = useState('')
+	function sortC(e) {
+		let s = [];
+		data.filter((element) => {
+			for (let i = 0; i < element.category.length; i++) {
+				if (element.category[i].title == e) {
+					s.push(element);
+				}
+			}
+		});
+    setdatas(s)
+	}
+	function sortB(e) {
+		let s = [];
+		data.filter((element) => {
+			if (element.brand.name == e) {
+				s.push(element);
+			}
+		});
+    setdatas(s)
+	}
 
 	return (
 		<div>
@@ -132,13 +133,19 @@ const [datas, setdatas] = useState(data)
 									return (
 										<Typography
 											key={e.name}
-											color="primary.main"
+											color={selectedB==e.name ?'primary.main':'black.main'}
 											variant="h6"
 											style={{
 												boxShadow: " 0px 2px 0px #D0D0D0",
 												paddingBottom: "3px",
 												paddingTop: "3px",
 												paddingLeft: "16px",
+												cursor:'pointer'
+											}}
+											onClick={()=>{
+												setselectedC('')
+												setselectedB(e.name)
+												sortB(e.name)
 											}}
 										>
 											{e.name}
@@ -182,13 +189,19 @@ const [datas, setdatas] = useState(data)
 									return (
 										<Typography
 											key={e.title}
-											color="primary.main"
+											color={selectedC==e.title ?'primary.main':'black.main'}
 											variant="h6"
 											style={{
 												boxShadow: " 0px 2px 0px #D0D0D0",
 												paddingBottom: "3px",
 												paddingTop: "3px",
 												paddingLeft: "16px",
+												cursor:'pointer'
+											}}
+											onClick={()=>{
+												setselectedB('')
+												setselectedC(e.title)
+												sortC(e.title)
 											}}
 										>
 											{e.title}
@@ -208,7 +221,10 @@ const [datas, setdatas] = useState(data)
 						lg={9}
 						xl={9}
 					>
-						{datas.map((e) => {
+						 {datas.length==0? <div>
+<Typography variant="h3" color="initial" style={{paddingLeft:'30px',paddingBottom:'50px'}}>No Products Found</Typography>
+						</div>:
+						 datas.map((e) => {
 							return (
 								<ProductCard
 									image={e.mainImage}
@@ -219,7 +235,10 @@ const [datas, setdatas] = useState(data)
 									slug={e.slug.current}
 								/>
 							);
-						})}
+						})
+						
+						
+}
 					</Grid>
 				</Grid>
 			</Container>
