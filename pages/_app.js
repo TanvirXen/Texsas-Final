@@ -33,7 +33,7 @@ const outerTheme = createTheme({
 	},
 	typography: {
 		h1:{
-			fontFamily:`"Raleway"`,
+			fontFamily:`"Inter"`,
 			fontWeight: "700",
 			fontSize: "3rem",
 			'@media (max-width:1100px)': {
@@ -50,34 +50,34 @@ const outerTheme = createTheme({
 			  },
 		},
 		h2:{
-			fontFamily:`"Raleway"`,
+			fontFamily:`"Inter"`,
 			fontWeight: "700",
 			fontSize: "2.5rem",
 		},
 		h3:{
-			fontFamily:`"Raleway"`,
+			fontFamily:`"Inter"`,
 			fontWeight: "700",
 			fontSize: "24px",
 	
 		},
 		h4:{
-			fontFamily:`"Raleway"`,
+			fontFamily:`"Inter"`,
 			fontWeight: "700",
 			fontSize: "1.5rem",
 		},
 		h5:{
-			fontFamily:`"Raleway"`
+			fontFamily:`"Inter"`
 		},
 		h6:{
-			fontFamily:`"Raleway"`
+			fontFamily:`"Inter"`
 		},
 		body1:{
-			fontFamily:`"Raleway"`,
+			fontFamily:`"Inter"`,
 			fontWeight: "500",
 			fontSize: "1.25rem",
 		},
 		body2:{
-			fontFamily:`"Raleway"`,
+			fontFamily:`"Inter"`,
 			fontWeight: "500",
 			fontSize: "1rem",
 			lineHeight:'1.3rem'

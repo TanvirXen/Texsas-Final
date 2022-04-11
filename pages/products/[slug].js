@@ -82,6 +82,8 @@ function Products(props) {
 							showArrows={false}
 							showIndicators={true}
 							emulateTouch={true}
+							autoPlay={true}
+							
 						>
 							{props.data.images.map((e) => {
 								return (
@@ -124,7 +126,7 @@ function Products(props) {
 					style={{ paddingTop: "40px" }}
 				>
 					<Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-						<Typography variant="h2" color="initial">
+						<Typography variant="h2" color="initial" style={{paddingBottom:'18px'}}>
 							Specifications
 						</Typography>
 					</Grid>
@@ -134,12 +136,12 @@ function Products(props) {
 							container
 							spacing={1}
 							direction="row"
-							style={{ paddingTop: "40px" }}
+							style={{ paddingTop: "10px" }}
 							key={e.key}
 							className='bdrProduct'
 						>
 												<Grid item xs={12} sm={4} md={3} lg={3} xl={3}>
-						<Typography variant="body2" color="black.light">
+						<Typography variant="body2" color="black.light" style={{fontWeight:'bold'}}>
 					{e.name}
 						</Typography>
 					</Grid>
