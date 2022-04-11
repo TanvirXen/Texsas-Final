@@ -78,7 +78,7 @@ function Blog(props) {
 						</Typography>
 					</Grid>
 					<Grid item xs={12} sm={10} md={9} lg={8} xl={8} className='padddowns'>
-						<PortableText value={props.data.description[0]}  />
+						<PortableText value={props.data.description}  />
 					</Grid>
 				</Grid>
 			</Container>
@@ -92,7 +92,7 @@ export async function getStaticProps(context) {
 	const blogs = await sanity.fetch(karma);
 	return {
 		props: { data: blogs[0] },
-		revalidate: 1000, // In seconds
+		revalidate: 100, // In seconds
 	};
 }
 export async function getStaticPaths() {

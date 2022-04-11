@@ -105,7 +105,7 @@ export async function getStaticProps() {
 	const products = await sanity.fetch(product);
 	return {
 		props: { card: products },
-		revalidate: 1000, // In seconds
+		revalidate: 100, // In seconds
 	};
 }
 export default Gallery;

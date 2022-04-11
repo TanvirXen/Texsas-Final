@@ -108,10 +108,11 @@ function Products(props) {
 						<Typography variant="body2" color="initial">
 							{}
 						</Typography>
-						<Typography variant="h2" color="initial">
+						<Typography variant="h2" color="initial" style={{marginBottom:'20px'}}>
 							{props.data.title}
 						</Typography>
-						<PortableText value={props.data.description[0]} />
+						{console.log(props.data)}
+						<PortableText value={props.data.description} />
 					</Grid>
 				</Grid>
 			</Container>
@@ -142,8 +143,9 @@ function Products(props) {
 					{e.name}
 						</Typography>
 					</Grid>
+				
 					<Grid item xs={12} sm={8} md={9} lg={9} xl={9} >
-					<PortableText value={e.description[0]}    />
+					<PortableText value={e.description}    />
 					</Grid>
 							</Grid>
 						)
@@ -161,7 +163,7 @@ export async function getStaticProps(context) {
 	const blogs = await sanity.fetch(karma);
 	return {
 		props: { data: blogs[0] },
-		revalidate: 1000, // In seconds
+		revalidate: 100, // In seconds
 	};
 }
 export async function getStaticPaths() {

@@ -156,6 +156,7 @@ export const getStaticProps = async () => {
 
 	return {
 		props: { products },
+    revalidate: 100, // In seconds
 	};
 };
 export default Products

@@ -3,22 +3,16 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from '@mui/material/Typography';
-export default function CardR(){
+export default function CardR({description,logo}){
     return(
-        <Card  variant="outlined" style={{backgroundColor:'#F5F9FF'}} className='rCard'>
+        <Card  variant="outlined" style={{backgroundColor:'#fff'}} className='rCard'>
         <CardContent>
-            <Typography variant="body1">
-                “It is a long established fact that a reader will be
-                distracted by the readable content of a page when looking at
-                its layout. The point of using Lorem Ipsum is that it has a
-                more-or-less normal distribution of letters, as opposed to
-                using Content here, content her, making it look like
-                readable English.”
+        <img src="/testimonial.svg" alt="" style={{paddingTop:'18px',paddingBottom:'18px'}} />
+            <Typography variant="body1" style={{paddingBottom:'10px'}} className='textArea'>
+{description}
             </Typography>
-            <br />
-            <Typography variant="h6"> Imtizza Khan            </Typography>
-            <Typography variant="h6"> Managing Director            </Typography>
-            <img src="/signature.png" alt="" style={{paddingTop:'8px'}} />
+
+        <div className="logoArea">    <img src={logo} alt="" style={{paddingTop:'18px',height:'auto',width:'auto'}} /></div>
         </CardContent>
         </Card>
     )

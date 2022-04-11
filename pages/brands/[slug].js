@@ -188,7 +188,7 @@ function Brands(props) {
 						<Typography variant="h3" color="black.dark" className={styles.pd1}>
 							Description
 						</Typography>
-						<PortableText value={props.data.description[0]} />
+						<PortableText value={props.data.description} />
 					</Grid>
 				</Grid>
 			</Container>
@@ -237,7 +237,7 @@ export async function getStaticProps(context) {
 	const blogs = await sanity.fetch(karma);
 	return {
 		props: { data: blogs[0] ,card:products},
-		revalidate: 1000, // In seconds
+		revalidate: 100, // In seconds
 	};
 }
 export async function getStaticPaths() {

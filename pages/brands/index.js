@@ -81,6 +81,7 @@ export const getStaticProps = async () => {
 
 	return {
 		props: { brands },
+		revalidate: 100, // In seconds
 	};
 };
 export default Brands
