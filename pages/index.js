@@ -34,17 +34,77 @@ function Home(props) {
 	const brands= props.brands
 	const sliders = useRef(null);
 	const slider = useRef(null);
-console.log(products)
-function sort (e){
-	let bigCities = [];
-for (let i = 0; i < products.length; i++) {
-    if (products[i].category ===e) {
-        bigCities.push(products[i]);
-    }
-}
-console.log(bigCities);
-}
-sort()
+		function sortC(e) {
+			let s = [];
+			products.filter((element) => {
+				for (let i = 0; i < element.category.length; i++) {
+					if (element.category[i].title == e) {
+						s.push(element);
+					}
+				}
+			});
+		setdata(s)
+		}
+		var setting = {
+			dots: false,
+			infinite: false,
+			speed: 500,
+			slidesToShow: 7,
+			slidesToScroll: 2,
+			arrows: false,
+			initialSlide: 0,
+			centerMode: false,
+			responsive: [
+				{
+					breakpoint: 1100,
+					settings: {
+						dots: false,
+						infinite: false,
+						speed: 500,
+						slidesToShow: 5,
+						slidesToScroll: 2,
+						arrows: false,
+						initialSlide: 2,
+					},
+				},
+				{
+					breakpoint: 850,
+					settings: {
+						dots: false,
+						infinite: false,
+						speed: 500,
+						slidesToShow: 4,
+						slidesToScroll: 1,
+						arrows: false,
+						initialSlide: 1.8,
+					},
+				},
+				{
+					breakpoint: 630,
+					settings: {
+						dots: false,
+						infinite: false,
+						speed: 500,
+						slidesToShow: 2.9,
+						slidesToScroll: 1,
+						arrows: false,
+						initialSlide: 1.8,
+					},
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						dots: false,
+						infinite: false,
+						speed: 500,
+						slidesToShow: 2.1,
+						slidesToScroll: 1,
+						arrows: false,
+						initialSlide: 1.3,
+					},
+				},
+			],
+		};
 	var settings = {
 		dots: false,
 		infinite: false,
@@ -420,32 +480,39 @@ sort()
 							</div>
 						</Grid>
 						<Grid item xs={12} md={12} lg={12} xl={12}>
-						{/* <div className="special" >
-									<span
+						<Slider  {...setting}>
+						<div
 										key="2"
 										className={
 										 (CatQ == "init" ? "produca" : "produc")
 										}
 										style={{ marginTop: "16px" }}
-
+										onClick={()=>{
+											setdata(products)
+											setCatQ('init')
+										}}
 									>
 										All Categories
-									</span>
-									{props.category.map((e) => {
-										return (
-											<span
-												key={e.title}
-												className={
-												 (CatQ == e ? "produca" : "produc")
-												}
-												style={{ marginTop: "16px" }}
-			
-											>
-												{e.title}
-											</span>
-										);
-									})}
-								</div> */}
+									</div>
+							{props.category.map((e) => {
+								return (
+									<div
+									key={e.title}
+									className={
+									 (CatQ == e.title ? "produca" : "produc")
+									}
+									style={{ marginTop: "16px" }}
+									onClick={()=>{
+										sortC(e.title)
+										setCatQ(e.title)
+									}}
+								>
+									{e.title}
+								</div>
+								);
+							})}
+						</Slider>
+
 								</Grid>
 						<Grid item xs={12} md={12} lg={12} xl={12}>
 						<div>

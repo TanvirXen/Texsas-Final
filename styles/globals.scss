@@ -295,7 +295,7 @@ p{
 	background-color: rgba(11, 186, 96, 0.08);
 	color: $Primary;
 	padding: 12px 24px;
-	margin-right: 8px;
+	margin-right: 16px;
 
 
 	box-sizing: border-box;
@@ -310,7 +310,7 @@ p{
 	background-color: rgba(11, 186, 96, 0.24);
 	color: $Primary;
 	padding: 12px 24px;
-	margin-right: 8px;
+	margin-right: 16px;
 
 	box-sizing: border-box;
 	cursor: pointer;
@@ -320,6 +320,11 @@ p{
 	font-size: 16px;
 	line-height: 120%;
 }
+.slick-list {margin: 0 -5px;}
+.slick-slide>div {padding: 0 5px;}
+
+/* the parent */
+
 //boardz start
 
 .boardz {
