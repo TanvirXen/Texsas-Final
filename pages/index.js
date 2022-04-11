@@ -445,6 +445,7 @@ sort()
 										title={e.model}
 										description={e.description[0].children[0].text}
 										logo={e.brand.logo}
+										slug={e.slug.current}
 									/>
 								);
 							})}
