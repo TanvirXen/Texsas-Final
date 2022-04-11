@@ -56,11 +56,14 @@ function NavbarDesktop() {
 						style={{ paddingTop: "30px" }}
 						justifyContent="flex-end"
 					>
+						<Link href="/" passHref>
 						<img
 							src="/logo.svg"
-							style={{ height: "40px", width: "auto" }}
+							style={{ height: "40px", width: "auto",cursor:'pointer' }}
 							alt="logo"
 						/>
+						</Link>
+		
 					</Grid>
 					<Grid item xs={8} md={8} lg={8} xl={8} className="borderNav">
 						<div className="menu">
@@ -119,7 +122,7 @@ function HamburgerMenu() {
 						src="/logo.svg"
 						alt="Logo"
 						onClick={() => Router.push({ pathname: "/" })}
-						style={{ height: "40px", width: "auto", paddingTop: "30px" }}
+						style={{ height: "40px", width: "auto", paddingTop: "30px" ,cursor:'pointer'}}
 					/>
 				</div>
 				<div style={{ paddingRight: "16px" }} onClick={() => setopen(true)}>
