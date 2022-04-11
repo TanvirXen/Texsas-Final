@@ -3,7 +3,7 @@ html,
 body {
 	padding: 0;
 	margin: 0;
-	font-family: 'Inter', sans-serif;
+	font-family: 'Inter';
 	overflow-x: hidden;
 }
 
@@ -19,7 +19,7 @@ a {
 }
 //Typography
 .navText {
-	font-family: 'Inter', sans-serif;
+	font-family: 'Inter';
 	text-decoration: none;
 	font-size: 18px;
 	color: $Primary;
@@ -85,6 +85,8 @@ ul {
 		list-style: none;
 		margin-bottom: 0;
 		justify-content: space-around;
+		margin-block-start: 1em;
+		margin-block-end: 0.5em;
 	}
 	ul a {
 		font-family: "Raleway";
@@ -162,6 +164,8 @@ footer {
 		list-style: none;
 		justify-content: flex-end;
 		padding-top: 16px;
+		margin-block-start: 1em;
+		margin-block-end: 0.5em;
 		a {
 			text-decoration: none;
 			font-size: 16px;
