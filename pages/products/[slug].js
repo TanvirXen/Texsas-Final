@@ -101,7 +101,7 @@ function Products(props) {
 					</Grid>
 				</Grid>
 			</Container>
-			<Container maxWidth="xl">
+			<Container maxWidth="xl" style={{paddingBottom:'40px'}}>
 				<Grid
 					container
 					spacing={1}
