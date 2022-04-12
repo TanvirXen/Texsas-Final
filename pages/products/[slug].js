@@ -121,26 +121,28 @@ function Products(props) {
 				</Grid>
 			</Container>
 			<Container maxWidth="xl" style={{paddingBottom:'40px'}}>
-				<Grid
-					container
-					spacing={1}
-					direction="row"
-					style={{ paddingTop: "40px" }}
-				>
-					<Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-						<Typography variant="h2" color="initial" style={{paddingBottom:'18px'}}>
-							Specifications
-						</Typography>
-					</Grid>
-					{props.data.specs.length ===0 ?<div></div>:
+
+					{props.data.specs ?
 					props.data.specs.map((e)=>{
 						return(
 							<Grid
 							container
 							spacing={1}
 							direction="row"
-							style={{ paddingTop: "10px" }}
+							style={{ paddingTop: "40px" }}
 							key={e.key}
+						>
+							<Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+								<Typography variant="h2" color="initial" style={{paddingBottom:'18px'}}>
+									Specifications
+								</Typography>
+							</Grid>
+							<Grid
+							container
+							spacing={1}
+							direction="row"
+							style={{ paddingTop: "10px" }}
+						
 							className='bdrProduct'
 						>
 												<Grid item xs={12} sm={4} md={3} lg={3} xl={3}>
@@ -153,10 +155,12 @@ function Products(props) {
 					<PortableText value={e.description}    />
 					</Grid>
 							</Grid>
+							</Grid>
 						)
-					})}
+					}):<div></div>
+				}
 
-				</Grid>
+		
 			</Container>
 		</div>
 	);
