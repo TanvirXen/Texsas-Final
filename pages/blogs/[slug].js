@@ -59,6 +59,8 @@ function Blog(props) {
 							showArrows={false}
 							showIndicators={true}
 							emulateTouch={true}
+							autoPlay={true}
+							infiniteLoop={true}
 							className="topspace"
 						>
 							{props.data.images.map((e) => {

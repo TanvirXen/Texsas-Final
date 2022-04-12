@@ -85,6 +85,7 @@ function Products(props) {
 							showIndicators={true}
 							emulateTouch={true}
 							autoPlay={true}
+							infiniteLoop={true}
 							
 						>
 							{props.data.images.map((e) => {
