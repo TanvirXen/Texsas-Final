@@ -89,9 +89,6 @@ const outerTheme = createTheme({
 });
 
 function MyApp({ Component, pageProps }) {
-	useEffect(() => {
-		TagManager.initialize({ gtmId: 'GTM-W7PGQXL' });
-	}, []);
 	return (
 		<ThemeProvider theme={outerTheme}>
 			<Layout>
