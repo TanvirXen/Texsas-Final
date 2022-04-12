@@ -132,7 +132,8 @@ function Products(props) {
 							Specifications
 						</Typography>
 					</Grid>
-					{props.data.specs.map((e)=>{
+					{props.data.specs.length ===0 ?<div></div>:
+					props.data.specs.map((e)=>{
 						return(
 							<Grid
 							container
