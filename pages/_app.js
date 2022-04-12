@@ -2,6 +2,8 @@ import "../styles/globals.scss";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Layout from "../Components/Layout";
 import 'animate.css';
+import { useEffect } from 'react';
+import TagManager from 'react-gtm-module';
 const outerTheme = createTheme({
 
 	breakpoints:{
@@ -87,6 +89,9 @@ const outerTheme = createTheme({
 });
 
 function MyApp({ Component, pageProps }) {
+	useEffect(() => {
+		TagManager.initialize({ gtmId: 'GTM-W7PGQXL' });
+	}, []);
 	return (
 		<ThemeProvider theme={outerTheme}>
 			<Layout>
