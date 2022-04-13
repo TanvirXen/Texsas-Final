@@ -148,7 +148,7 @@ const [selectedB, setselectedB] = useState('')
 												sortB(e.name)
 											}}
 										>
-											{e.name}
+											{e.name.toUpperCase()}
 										</Typography>
 									);
 								})}
@@ -204,7 +204,7 @@ const [selectedB, setselectedB] = useState('')
 												sortC(e.title)
 											}}
 										>
-											{e.title}
+											{e.title.toUpperCase()}
 										</Typography>
 									);
 								})}
@@ -230,7 +230,7 @@ const [selectedB, setselectedB] = useState('')
 									image={e.mainImage}
 									key={e.model}
 									title={e.model}
-									description={e.description[0].children[0].text}
+									description={e.sdescription}
 									logo={e.brand.logo}
 									slug={e.slug.current}
 								/>

@@ -493,7 +493,7 @@ function Home(props) {
 											setCatQ('init')
 										}}
 									>
-										All Categories
+										All CATEGORIES
 									</div>
 							{props.category.map((e) => {
 								return (
@@ -508,7 +508,7 @@ function Home(props) {
 										setCatQ(e.title)
 									}}
 								>
-									{e.title}
+									{e.title.toUpperCase()}
 								</div>
 								);
 							})}
