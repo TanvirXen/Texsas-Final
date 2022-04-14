@@ -77,6 +77,7 @@ function Brands(props) {
 			},
 		],
 	};
+	const [more, setmore] = useState(false)
 	return (
 		<div>
 			<Head>
@@ -150,7 +151,7 @@ function Brands(props) {
 								<span>
 									<img src="/web.svg" alt="icon" style={{ height: "24px" }} />
 								</span>{" "}
-								<span style={{ paddingTop: "2px", paddingLeft: "2px" }}>
+								<span style={{  paddingLeft: "2px" }}>
 									{props.data.website}
 								</span>
 							</Typography>
@@ -164,7 +165,7 @@ function Brands(props) {
 							<span>
 								<img src="/origin.svg" alt="icon" style={{ height: "24px" }} />
 							</span>{" "}
-							<span style={{ paddingTop: "2px", paddingLeft: "2px" }}>
+							<span style={{  paddingLeft: "2px" }}>
 								{props.data.origin}
 							</span>
 						</Typography>
@@ -189,7 +190,17 @@ function Brands(props) {
 						<Typography variant="h3" color="black.dark" className={styles.pd1}>
 							Description
 						</Typography>
-						<PortableText value={props.data.description} />
+						<div className={more?'':'texthides'}>
+						<PortableText value={props.data.description}  />
+					
+
+						</div>
+						{more?<p style={{color:'#526899',cursor:'pointer'}} onClick={()=>{setmore(false) &&  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  })}}>See Less</p>:<p style={{color:'#526899',cursor:'pointer'}} onClick={()=>{setmore(true)}}>See More</p>}
+
+						
 					</Grid>
 				</Grid>
 			</Container>
@@ -206,7 +217,7 @@ function Brands(props) {
 										image={e.mainImage}
 										key={e.model}
 										title={e.model}
-										description={e.description[0].children[0].text}
+										description={e.sdescription}
 										logo={e.brand.logo}
 									/>
 								);

@@ -7,9 +7,76 @@ import imageUrlFor from "../../utils/imageUrlFor.js";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { PortableText } from "@portabletext/react";
-const blog = '*[_type=="product"]';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import ProductCard from "../../Components/ProductCardS";
+import styles from "../../styles/Brands.module.scss";
+import { useState, useCallback, useEffect, useRef } from "react";
+const blog = `*[_type=="product"]{...,product->,brand->}`;
 function Products(props) {
+	const sliders = useRef(null);
 	console.log(props.data)
+	var settingss = {
+		dots: false,
+		infinite: false,
+		speed: 500,
+		slidesToShow: 4,
+		slidesToScroll: 2,
+		arrows: false,
+		initialSlide: 0,
+		centerMode: false,
+		responsive: [
+			{
+				breakpoint: 1100,
+				settings: {
+					dots: false,
+					infinite: false,
+					speed: 500,
+					slidesToShow: 3,
+					slidesToScroll: 2,
+					arrows: false,
+					initialSlide: 2,
+				},
+			},
+			{
+				breakpoint: 850,
+				settings: {
+					dots: false,
+					infinite: false,
+					speed: 500,
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					arrows: false,
+					initialSlide: 1.8,
+				},
+			},
+            {
+				breakpoint: 630,
+				settings: {
+					dots: false,
+					infinite: false,
+					speed: 500,
+					slidesToShow: 1.8,
+					slidesToScroll: 1,
+					arrows: false,
+					initialSlide: 1.8,
+				},
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					dots: false,
+					infinite: false,
+					speed: 500,
+					slidesToShow: 1.3,
+					slidesToScroll: 1,
+					arrows: false,
+					initialSlide: 1.3,
+				},
+			},
+		],
+	};
 	return (
 		<div>
 				<Head>
@@ -73,8 +140,9 @@ function Products(props) {
 					>
 						<img
 							src={imageUrlFor(props.data.brand.logo)}
-							alt=""
+							alt="logo"
 							className="respImg"
+							style={{maxHeight:'60px'}}
 						/>
 					</Grid>
 					<Grid item xs={12} sm={12} md={12} lg={12} xl={12} >
@@ -164,14 +232,54 @@ function Products(props) {
 		</Grid>
 		
 			</Container>: <div></div>}
-		
+{
+props.data.auxProduct? 			<Container maxWidth="xl" className={styles.hero11}>
+<Grid >
+	<Typography variant="h2" color="black.dark" className={styles.pd1}>
+		Similar Products:
+	</Typography>
+	<div>
+		<Slider ref={sliders} {...settingss}>
+			{/* {props.data.auxProduct.map((e) => {
+				return (
+					<ProductCard
+						image={e.mainImage}
+						key={e.model}
+						title={e.model}
+						description={e.sdescription}
+						logo={e.brand.logo}
+					/>
+				);
+			})} */}
+		</Slider>
+		<div
+			style={{ marginTop: "16px", paddingBottom: "100px" }}
+			className="none"
+		>
+			<span onClick={() => sliders?.current?.slickPrev()}>
+				<img src="/arrowLG.svg" alt="" />
+			</span>
+			<span onClick={() => sliders?.current?.slickNext()}>
+				<img src="/arrowRG.svg" alt="" />
+			</span>
+		</div>
+	</div>
+</Grid>
+</Container>:<div></div>
+}
 		</div>
 	);
 }
 
 export async function getStaticProps(context) {
 	const id = context.params.slug;
-	const karma = `*[_type=="product" && slug.current=="${id}"]{...,brand->}{...,categories->}`;
+	const karma = `*[_type=="product" && slug.current=="${id}"]{
+		...,
+		"auxProduct": product[]->{
+			...
+			brand->
+		  },'category': category[]->,brand->
+	  }`;
 	const blogs = await sanity.fetch(karma);
 	return {
 		props: { data: blogs[0] },

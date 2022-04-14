@@ -12,7 +12,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Head from "next/head";
 
-const product = `*[_type=="product"]{...,'category': category[]->,brand->}`;
+const product = `*[_type=="product"]{...,'category': category[]->,'auxProduct': product[]->,brand->}`;
 const categorys = '*[_type=="category"]';
 const brand = '*[_type=="brand"]';
 function Products(props) {
