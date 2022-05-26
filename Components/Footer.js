@@ -84,11 +84,19 @@ function FooterW() {
 							</Typography>
 						</a>
 						<a
-							href="mailto:contact@texsasbd.com"
+							href="mailto:amirul@texsasbd.com"
+					
+						>
+							<Typography variant="body1" color="secondary.main">
+								amirul@texsasbd.com
+							</Typography>
+						</a>
+						<a
+							href="mailto:sales@texsasbd.com"
 							style={{ paddingBottom: "24px" }}
 						>
 							<Typography variant="body1" color="secondary.main">
-								contact@texsasbd.com
+								sales@texsasbd.com
 							</Typography>
 						</a>
 						<span className="button1">

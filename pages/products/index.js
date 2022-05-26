@@ -213,7 +213,7 @@ const [selectedB, setselectedB] = useState('')
 					</Grid>
 					<Grid
 						container
-						spacing={1}
+						spacing={4}
 						direction="row"
 						xs={12}
 						sm={12}

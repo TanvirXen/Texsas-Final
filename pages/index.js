@@ -15,6 +15,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CardR from "../Components/TestimonialCard.js";
 import ProductCard from "../Components/ProductCardS";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import AOS from "aos";
 const brand = '*[_type=="brand"]';
 const product = `*[_type=="product"]{...,'category': category[]->,brand->}`;
@@ -28,6 +30,32 @@ const testimonials =[
 	{description:'Texsas Engineering not only has provided us with some machinaries from top brands, but has amazed us with their after-sales service whenever we needed them. ',logo:'/saad.svg'},
 ]
 function Home(props) {
+	const useMediaQuery = (width) => {
+		const [targetReached, setTargetReached] = useState(false);
+	
+		const updateTarget = useCallback((e) => {
+			if (e.matches) {
+				setTargetReached(true);
+			} else {
+				setTargetReached(false);
+			}
+		}, []);
+	
+
+		useEffect(() => {
+			AOS.init();
+			const media = window.matchMedia(`(max-width: ${width}px)`);
+			media.addListener(updateTarget);
+	
+			// Check on mount (callback is not called until a change occurs)
+			if (media.matches) {
+				setTargetReached(true);
+			}
+	
+			return () => media.removeListener(updateTarget);
+		}, []);
+		return targetReached;
+	};
 	const products =props.products
 	const [data, setdata] = useState(props.products)
 	const [CatQ, setCatQ] = useState('init')
@@ -225,9 +253,7 @@ function Home(props) {
 			},
 		],
 	};
-	useEffect(() => {
-		AOS.init();
-	}, []);
+	const isBreakpoint = useMediaQuery(900);
 
 	return (
 		<div>
@@ -292,16 +318,49 @@ function Home(props) {
 				<meta property="og:type" content="website" />
 				<meta property="og:url" content="https://www.texsasbd.com/" />
 				<meta property="og:title" content="TEXSAS- Home" />
-				<meta name = "keywords" content = "Texsas, Texsas Engineering,Textile Machines Bangladesh,Textile Bangladesh,Textile Machines BD,Texsas BD,Texsas Bangladesh" />
+				<meta name = "keywords" content = "Texsas, Texsas Engineering,Textile ,Machines ,Textile Bangladesh,Textile Machines BD,Texsas BD,Texsas Bangladesh" />
 				<meta
 					property="og:description"
 					content="Connecting you to the world’s leading Textile Solutions with top class service."
 				/>
 				<meta property="og:image" content='/meta.png' />
 			</Head>
-			<Container maxWidth="xl" style={{ paddingBottom: "100px" }}>
+			{isBreakpoint ? 	<Container maxWidth="xl" style={{ paddingBottom: "100px" }}>
 				<Grid container spacing={0}>
-					<Grid item xs={12} md={8} lg={8} xl={8}>
+				<Grid
+						item
+						xs={12}
+						md={6}
+						lg={6}
+						xl={6}
+						container
+						direction="column"
+						className={styles.herobtn}
+					>
+						<div className="customsilde">
+						<Carousel
+							showStatus={false}
+							swipeable={true}
+							showArrows={false}
+							showIndicators={false}
+							emulateTouch={true}
+							autoPlay={true}
+							infiniteLoop={true}
+							showThumbs={false}
+							
+						>
+	<img src="demo1.png" alt="" />
+	<img src="demo2.png" alt="" />
+	<img src="demo3.png" alt="" />
+	<img src="demo4.png" alt="" />
+	<img src="demo5.png" alt="" />
+	<img src="demo6.png" alt="" />
+
+						</Carousel>
+						</div>
+
+					</Grid>
+					<Grid item xs={12} md={6} lg={6} xl={6}>
 						<Typography
 							variant="h1"
 							color="black.dark"
@@ -315,26 +374,76 @@ function Home(props) {
 							variant="h6"
 							color="black.dark"
 							className="animate__animated animate__bounceInLeft"
+							style={{paddingBottom:'40px'}}
+						>
+							Textile Solutions And Services
+						</Typography>
+						<span className={"button1" + " " + styles.padd100}>
+							<Link href="/contact">Get In Touch</Link>
+						</span>
+					</Grid>
+
+				</Grid>
+			</Container> : 	<Container maxWidth="xl" style={{ paddingBottom: "100px" }}>
+				<Grid container spacing={0}>
+					<Grid item xs={12} md={6} lg={6} xl={6}>
+						<Typography
+							variant="h1"
+							color="black.dark"
+							className={
+								styles.hero + " " + "animate__animated animate__bounceInLeft"
+							}
 						>
 							One Stop Textile Solutions And Services in Bangladesh
 						</Typography>
+						<Typography
+							variant="h6"
+							color="black.dark"
+							className="animate__animated animate__bounceInLeft"
+							style={{paddingBottom:'40px'}}
+						>
+							Textile Solutions And Services
+						</Typography>
+						<span className={"button1" + " " + styles.padd100}>
+							<Link href="/contact">Get In Touch</Link>
+						</span>
 					</Grid>
 					<Grid
 						item
 						xs={12}
-						md={4}
-						lg={4}
-						xl={4}
+						md={6}
+						lg={6}
+						xl={6}
 						container
 						direction="column"
 						className={styles.herobtn}
 					>
-						<span className={"button1" + " " + styles.padd100}>
-							<Link href="#">Get In Touch</Link>
-						</span>
+						<div className="customsilde">
+						<Carousel
+							showStatus={false}
+							swipeable={true}
+							showArrows={false}
+							showIndicators={false}
+							emulateTouch={true}
+							autoPlay={true}
+							infiniteLoop={true}
+							showThumbs={false}
+							
+						>
+	<img src="demo1.png" alt="" />
+	<img src="demo2.png" alt="" />
+	<img src="demo3.png" alt="" />
+	<img src="demo4.png" alt="" />
+	<img src="demo5.png" alt="" />
+	<img src="demo6.png" alt="" />
+
+						</Carousel>
+						</div>
+
 					</Grid>
 				</Grid>
-			</Container>
+			</Container>}
+			
 			<div className={styles.bgs}>
 				<Container maxWidth="xl">
 					<Grid>
@@ -390,7 +499,7 @@ function Home(props) {
 							<div data-aos="fade-right" data-aos-duration="2000">
 								<Typography
 									variant="body2"
-									color="secondary.dark"
+									color="primary.main"
 									className={styles.padding100}
 								>
 									OUR VALUES
@@ -403,7 +512,7 @@ function Home(props) {
 									We creeate value from shipment to servicing.
 								</Typography>
 								<span className="button1">
-									<Link href="#">Learn More</Link>
+									<Link href="/about">Learn More</Link>
 								</span>
 							</div>
 						</Grid>
@@ -411,7 +520,7 @@ function Home(props) {
 							<div data-aos="fade-left" data-aos-duration="2000">
 								<Typography
 									variant="h4"
-									color="secondary.dark"
+									color="primary.main"
 									className={styles.padding100}
 								>
 									Affordable Textile Solutions
@@ -425,7 +534,7 @@ function Home(props) {
 									Solutions in Bangladesh.
 								</Typography>
 
-								<Typography variant="h4" color="secondary.dark">
+								<Typography variant="h4" color="primary.main">
 									Top Notch Service
 								</Typography>
 								<Typography
@@ -437,7 +546,7 @@ function Home(props) {
 									world class service for your Textile machinaries.
 								</Typography>
 
-								<Typography variant="h4" color="secondary.dark">
+								<Typography variant="h4" color="primary.main">
 									Commitment and Dedication
 								</Typography>
 								<Typography
@@ -460,7 +569,7 @@ function Home(props) {
 							<div data-aos="fade-right" data-aos-duration="2000">
 								<Typography
 									variant="body2"
-									color="black.light"
+									color="primary.main"
 									className={styles.padding100}
 								>
 									OUR PRODUCTS
@@ -527,7 +636,7 @@ function Home(props) {
 								image={e.mainImage}
 								key={e.model}
 								title={e.model}
-								description={e.description[0].children[0].text}
+								description={e.sdescription}
 								logo={e.brand.logo}
 								slug={e.slug.current}
 							/>
@@ -561,17 +670,17 @@ function Home(props) {
 							<div data-aos="fade-right" data-aos-duration="2000">
 								<Typography
 									variant="body2"
-									color="secondary.dark"
+									color="primary.main"
 									className={styles.padding100}
 								>
 									TESTIMONIALS
 								</Typography>
-								<Typography variant="h2" color="secondary.dark">
+								<Typography variant="h2" color="black.dark">
 									We are a reknowned name in the industry
 								</Typography>
 								<Typography
 									variant="h6"
-									color="secondary.dark"
+									color="black.dark"
 									style={{ marginBottom: "28px" }}
 								>
 									Connecting you to the world’s leading Textile Solutions with

@@ -20,7 +20,7 @@ export default function BrandCard({image,title,logo,description,slug}) {
           alt="brand logo"
         />
         <CardContent>
-          <Typography gutterBottom variant="h3" component="div" className='texthide'  style={{height:'55px'}}>
+          <Typography gutterBottom variant="h3" component="div" className='texthide'  style={{height:'55px'}} color='primary.main'>
            {title}
           </Typography>
           <Typography variant="body1" color="black.dark" className='texthide'  >

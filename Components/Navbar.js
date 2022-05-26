@@ -48,10 +48,10 @@ function NavbarDesktop() {
 				<Grid container spacing={0}>
 					<Grid
 						item
-						xs={2}
-						md={2}
-						lg={2}
-						xl={2}
+						xs={3}
+						md={3}
+						lg={3}
+						xl={3}
 						className="borderNav"
 						style={{ paddingTop: "30px" }}
 						justifyContent="flex-end"
@@ -65,7 +65,7 @@ function NavbarDesktop() {
 						</Link>
 		
 					</Grid>
-					<Grid item xs={8} md={8} lg={8} xl={8} className="borderNav">
+					<Grid item xs={7} md={7} lg={7} xl={7} className="borderNav">
 						<div className="menu">
 							{" "}
 							<ul>

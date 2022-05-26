@@ -80,7 +80,7 @@ function Products({ blogs }) {
 				/>
 				<meta property="og:image" content='/meta.png' />
 			</Head>
-			{isBreakpoint ? (
+	
  <div className="brandHero">
  <Container maxWidth="xl">
  <Typography variant="h2" color="secondary.dark" className={styles.hero+' '+'animate__animated animate__bounceInLeft'}>
@@ -89,9 +89,7 @@ Blogs
  </Container>
  
 	 </div>
-				) : (
-	<div></div>
-				)}
+				
 			<Container maxWidth="xl" className={styles.hero1}>
 				{isBreakpoint ? (
 					<BlogCard

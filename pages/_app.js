@@ -31,6 +31,9 @@ const outerTheme = createTheme({
 		},
 		blue:{
 			light:'#526899'
+		},
+		red:{
+			light:'#ED1C24'
 		}
 	},
 	typography: {
@@ -85,7 +88,7 @@ const outerTheme = createTheme({
 			lineHeight:'1.3rem'
 		}
 	},
-	
+
 });
 
 function MyApp({ Component, pageProps }) {

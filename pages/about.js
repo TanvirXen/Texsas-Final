@@ -60,7 +60,7 @@ export default function About() {
 								variant="h2"
 								color="secondary.dark"
 								className={
-									styles.hero + " " + "animate__animated animate__bounceInLeft"
+									styles.heroo + " " + "animate__animated animate__bounceInLeft"
 								}
 							>
 								We are a One Stop Textile Solutions and Service provider in
