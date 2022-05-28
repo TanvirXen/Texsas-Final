@@ -2,6 +2,8 @@ import "../styles/globals.scss";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Layout from "../Components/Layout";
 import 'animate.css';
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 import { useEffect } from 'react';
 import TagManager from 'react-gtm-module';
 const outerTheme = createTheme({
@@ -90,7 +92,27 @@ const outerTheme = createTheme({
 	},
 
 });
-
+const firebaseConfig = {
+	apiKey: "AIzaSyBcxthfQVYLvbxBuU9fKrUg-KlonCVUsGE",
+	authDomain: "texaswebsite-13a01.firebaseapp.com",
+	projectId: "texaswebsite-13a01",
+	storageBucket: "texaswebsite-13a01.appspot.com",
+	messagingSenderId: "798091157612",
+	appId: "1:798091157612:web:a3a77aac25e9d957fab849",
+	measurementId: "G-7X4XHHVWXZ"
+  };
+  
+  let analytics
+  if (firebaseConfig?.projectId) {
+	// Initialize Firebase
+	const app = initializeApp(firebaseConfig);
+  
+	if (app.name && typeof window !== 'undefined') {
+	  analytics = getAnalytics(app);
+	}
+  
+  }
+  
 function MyApp({ Component, pageProps }) {
 	return (
 		<ThemeProvider theme={outerTheme}>

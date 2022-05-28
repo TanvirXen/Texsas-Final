@@ -293,7 +293,7 @@ src={props.data.url}>
 						</Typography>
 						<div>
 							<Slider ref={sliders} {...settingss}>
-								{/* {props.data.auxProduct.map((e) => {
+								{props.data.auxProduct.map((e) => {
 				return (
 					<ProductCard
 						image={e.mainImage}
@@ -303,7 +303,7 @@ src={props.data.url}>
 						logo={e.brand.logo}
 					/>
 				);
-			})} */}
+			})}
 							</Slider>
 							<div
 								style={{ marginTop: "16px", paddingBottom: "100px" }}
