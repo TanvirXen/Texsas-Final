@@ -16,7 +16,7 @@ import { useState, useCallback, useEffect, useRef } from "react";
 const blog = `*[_type=="product"]{...,product->,brand->}`;
 function Products(props) {
 	const sliders = useRef(null);
-	console.log(props.data)
+	console.log(props.data);
 	var settingss = {
 		dots: false,
 		infinite: false,
@@ -51,7 +51,7 @@ function Products(props) {
 					initialSlide: 1.8,
 				},
 			},
-            {
+			{
 				breakpoint: 630,
 				settings: {
 					dots: false,
@@ -79,8 +79,8 @@ function Products(props) {
 	};
 	return (
 		<div>
-				<Head>
-				<title>TEXSAS- 	{props.data.model}</title>
+			<Head>
+				<title>TEXSAS- {props.data.model}</title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<link
 					rel="apple-touch-icon"
@@ -108,14 +108,25 @@ function Products(props) {
 
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<meta property="og:type" content="website" />
-				<meta property="og:url" content={"https://www.texsasbd.com/products/"+props.data.slug.current} />
-				<meta property="og:title" content={"TEXSAS-"+props.data.model} />
-				<meta name = "keywords" content = {"Texsas, Texsas Engineering,Textile Machines Bangladesh,Textile Bangladesh,Textile Machines BD,Texsas BD,Texsas Bangladesh,"+props.data.keywords} />
 				<meta
-					property="og:description"
-					content={props.data.sdescription}
+					property="og:url"
+					content={
+						"https://www.texsasbd.com/products/" + props.data.slug.current
+					}
 				/>
-				<meta property="og:image" content=	{imageUrlFor(props.data.images[0].asset)} />
+				<meta property="og:title" content={"TEXSAS-" + props.data.model} />
+				<meta
+					name="keywords"
+					content={
+						"Texsas, Texsas Engineering,Textile Machines Bangladesh,Textile Bangladesh,Textile Machines BD,Texsas BD,Texsas Bangladesh," +
+						props.data.keywords
+					}
+				/>
+				<meta property="og:description" content={props.data.sdescription} />
+				<meta
+					property="og:image"
+					content={imageUrlFor(props.data.images[0].asset)}
+				/>
 			</Head>
 			<Container maxWidth="xl">
 				<Grid
@@ -124,7 +135,15 @@ function Products(props) {
 					direction="row"
 					style={{ paddingTop: "40px" }}
 				>
-					<Grid item xs={8} sm={8} md={8} lg={8} xl={8} style={{paddingBottom:'20px' }}>
+					<Grid
+						item
+						xs={8}
+						sm={8}
+						md={8}
+						lg={8}
+						xl={8}
+						style={{ paddingBottom: "20px" }}
+					>
 						<Typography variant="h1" color="black.dark">
 							{props.data.model}
 						</Typography>
@@ -136,16 +155,20 @@ function Products(props) {
 						md={4}
 						lg={4}
 						xl={4}
-						style={{ display: "flex", justifyContent: "flex-end",paddingBottom:'20px'  }}
+						style={{
+							display: "flex",
+							justifyContent: "flex-end",
+							paddingBottom: "20px",
+						}}
 					>
 						<img
 							src={imageUrlFor(props.data.brand.logo)}
 							alt="logo"
 							className="respImg"
-							style={{maxHeight:'60px'}}
+							style={{ maxHeight: "60px" }}
 						/>
 					</Grid>
-					<Grid item xs={12} sm={12} md={12} lg={12} xl={12} >
+					<Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
 						<Carousel
 							showStatus={false}
 							swipeable={true}
@@ -154,7 +177,6 @@ function Products(props) {
 							emulateTouch={true}
 							autoPlay={true}
 							infiniteLoop={true}
-							
 						>
 							{props.data.images.map((e) => {
 								return (
@@ -170,18 +192,22 @@ function Products(props) {
 					</Grid>
 				</Grid>
 			</Container>
-			<Container maxWidth="xl" style={{paddingBottom:'40px'}}>
+			<Container maxWidth="xl" style={{ paddingBottom: "40px" }}>
 				<Grid
 					container
 					spacing={1}
 					direction="row"
-					style={{ paddingTop: "40px"}}
+					style={{ paddingTop: "40px" }}
 				>
 					<Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
 						<Typography variant="body2" color="initial">
 							{}
 						</Typography>
-						<Typography variant="h2" color="initial" style={{marginBottom:'20px'}}>
+						<Typography
+							variant="h2"
+							color="initial"
+							style={{ marginBottom: "20px" }}
+						>
 							{props.data.title}
 						</Typography>
 						{console.log(props.data)}
@@ -189,58 +215,63 @@ function Products(props) {
 					</Grid>
 				</Grid>
 			</Container>
-			{props.data.specs ?	<Container maxWidth="xl" style={{paddingBottom:'40px'}}>
-			<Grid
-							container
-							spacing={1}
-							direction="row"
-							style={{ paddingTop: "40px" }}
-						
-						>
-							<Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-								<Typography variant="h2" color="initial" style={{paddingBottom:'18px'}}>
-									Specifications
-								</Typography>
-							</Grid>
-					{
-					props.data.specs.map((e)=>{
-						
-						return(
-		
-							<Grid
-							container
-							spacing={1}
-							direction="row"
-							style={{ paddingTop: "10px" }}
-							key={e.key}
-							className='bdrProduct'
-						>
-												<Grid item xs={12} sm={4} md={3} lg={3} xl={3}>
-						<Typography variant="body2" color="black.light" style={{fontWeight:'bold'}}>
-					{e.name}
+			{props.data.specs ? (
+				<Container maxWidth="xl" style={{ paddingBottom: "40px" }}>
+					<Grid
+						container
+						spacing={1}
+						direction="row"
+						style={{ paddingTop: "40px" }}
+					>
+						<Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+							<Typography
+								variant="h2"
+								color="initial"
+								style={{ paddingBottom: "18px" }}
+							>
+								Specifications
+							</Typography>
+						</Grid>
+						{props.data.specs.map((e) => {
+							return (
+								<Grid
+									container
+									spacing={1}
+									direction="row"
+									style={{ paddingTop: "10px" }}
+									key={e.key}
+									className="bdrProduct"
+								>
+									<Grid item xs={12} sm={4} md={3} lg={3} xl={3}>
+										<Typography
+											variant="body2"
+											color="black.light"
+											style={{ fontWeight: "bold" }}
+										>
+											{e.name}
+										</Typography>
+									</Grid>
+
+									<Grid item xs={12} sm={8} md={9} lg={9} xl={9}>
+										<PortableText value={e.description} />
+									</Grid>
+								</Grid>
+							);
+						})}
+					</Grid>
+				</Container>
+			) : (
+				<div></div>
+			)}
+			{props.data.auxProduct ? (
+				<Container maxWidth="xl" className={styles.hero11}>
+					<Grid>
+						<Typography variant="h2" color="black.dark" className={styles.pd1}>
+							Similar Products:
 						</Typography>
-					</Grid>
-				
-					<Grid item xs={12} sm={8} md={9} lg={9} xl={9} >
-					<PortableText value={e.description}    />
-					</Grid>
-							</Grid>
-					
-						)
-					})
-				}
-		</Grid>
-		
-			</Container>: <div></div>}
-{
-props.data.auxProduct? 			<Container maxWidth="xl" className={styles.hero11}>
-<Grid >
-	<Typography variant="h2" color="black.dark" className={styles.pd1}>
-		Similar Products:
-	</Typography>
-	<div>
-		<Slider ref={sliders} {...settingss}>
-			{/* {props.data.auxProduct.map((e) => {
+						<div>
+							<Slider ref={sliders} {...settingss}>
+								{/* {props.data.auxProduct.map((e) => {
 				return (
 					<ProductCard
 						image={e.mainImage}
@@ -251,22 +282,46 @@ props.data.auxProduct? 			<Container maxWidth="xl" className={styles.hero11}>
 					/>
 				);
 			})} */}
-		</Slider>
-		<div
-			style={{ marginTop: "16px", paddingBottom: "100px" }}
-			className="none"
-		>
-			<span onClick={() => sliders?.current?.slickPrev()}>
-				<img src="/arrowLG.svg" alt="" />
-			</span>
-			<span onClick={() => sliders?.current?.slickNext()}>
-				<img src="/arrowRG.svg" alt="" />
-			</span>
-		</div>
-	</div>
-</Grid>
-</Container>:<div></div>
+							</Slider>
+							<div
+								style={{ marginTop: "16px", paddingBottom: "100px" }}
+								className="none"
+							>
+								<span onClick={() => sliders?.current?.slickPrev()}>
+									<img src="/arrowLG.svg" alt="" />
+								</span>
+								<span onClick={() => sliders?.current?.slickNext()}>
+									<img src="/arrowRG.svg" alt="" />
+								</span>
+							</div>
+						</div>
+					</Grid>
+				</Container>
+			) : (
+				<div></div>
+			)}
+{props.data.url ?(			<Container maxWidth="xl" className={styles.hero11}>
+				<Grid
+					container
+					spacing={1}
+					direction="row"
+					style={{ paddingTop: "40px" }}
+				>
+					<Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+						<Typography variant="h2" color="black.dark" className={styles.pd1}>
+							Product Preview
+						</Typography>
+					</Grid>
+					<Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+					<iframe style={{width:'100%',height:'500px'}}
+src={props.data.url}>
+</iframe>
+					</Grid>
+				</Grid>
+			</Container>):(<div></div>)
+
 }
+
 		</div>
 	);
 }
