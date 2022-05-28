@@ -192,6 +192,7 @@ function Products(props) {
 					</Grid>
 				</Grid>
 			</Container>
+
 			<Container maxWidth="xl" style={{ paddingBottom: "40px" }}>
 				<Grid
 					container
@@ -215,6 +216,27 @@ function Products(props) {
 					</Grid>
 				</Grid>
 			</Container>
+			{props.data.url ?(			<Container maxWidth="xl" className={styles.hero11}>
+				<Grid
+					container
+					spacing={1}
+					direction="row"
+					style={{ paddingTop: "40px" }}
+				>
+					<Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+						<Typography variant="h2" color="black.dark" className={styles.pd1}>
+							Product Preview
+						</Typography>
+					</Grid>
+					<Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+					<iframe style={{width:'100%',height:'500px'}}
+src={props.data.url}>
+</iframe>
+					</Grid>
+				</Grid>
+			</Container>):(<div></div>)
+
+}
 			{props.data.specs ? (
 				<Container maxWidth="xl" style={{ paddingBottom: "40px" }}>
 					<Grid
@@ -300,27 +322,7 @@ function Products(props) {
 			) : (
 				<div></div>
 			)}
-{props.data.url ?(			<Container maxWidth="xl" className={styles.hero11}>
-				<Grid
-					container
-					spacing={1}
-					direction="row"
-					style={{ paddingTop: "40px" }}
-				>
-					<Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-						<Typography variant="h2" color="black.dark" className={styles.pd1}>
-							Product Preview
-						</Typography>
-					</Grid>
-					<Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-					<iframe style={{width:'100%',height:'500px'}}
-src={props.data.url}>
-</iframe>
-					</Grid>
-				</Grid>
-			</Container>):(<div></div>)
 
-}
 
 		</div>
 	);
