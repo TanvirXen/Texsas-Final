@@ -84,7 +84,14 @@ export default function Contact (){
 								color="black.dark"
 						
 							>
-         <a href="mailto: hello@texsasbd.com"  style={{color:'#002169',textDecoration:'underline'}}>hello@texsasbd.com</a>
+         <a href="mailto: sales@texsasbd.com"  style={{color:'#002169',textDecoration:'underline'}}>sales@texsasbd.com</a>
+							</Typography>
+							<Typography
+								variant="body2"
+								color="black.dark"
+						
+							>
+         <a href="mailto: amirul@texsasbd.com"  style={{color:'#002169',textDecoration:'underline'}}>amirul@texsasbd.com</a>
 							</Typography>
                             <Typography
 								variant="body2"

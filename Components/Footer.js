@@ -55,7 +55,7 @@ function FooterW() {
 							style={{ paddingTop: "30px" }}
 						>
 							TEXSAS Engineering CO. LTD is a trading house with extensive
-							experience acquired over the years while meeting the challenges of
+							experience in printing and finishing acquired over the years while meeting the challenges of
 							current business contests whose success is inextricably linked to
 							the professional and technical capabilities and team of highly
 							competent team.{" "}
@@ -219,7 +219,7 @@ function FooterM() {
 							style={{ paddingTop: "30px" }}
 						>
 							TEXSAS Engineering CO. LTD is a trading house with extensive
-							experience acquired over the years while meeting the challenges of
+							experience in printing and finishing acquired over the years while meeting the challenges of
 							current business contests whose success is inextricably linked to
 							the professional and technical capabilities and team of highly
 							competent team.{" "}
