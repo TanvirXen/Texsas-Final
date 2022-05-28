@@ -89,7 +89,7 @@ export default function About() {
                     <Grid item xs={12} md={6} lg={6} xl={6}>
                     <Typography
 								variant="body1"
-								color="black.dark"
+								color="primary.main"
 								className={
 									styles.heross 
 								}
@@ -120,7 +120,7 @@ export default function About() {
                     <Grid item xs={12} md={12} lg={12} xl={12}>
                     <Typography
 								variant="body1"
-								color="black.dark"
+								color="primary.main"
 								className={
 									styles.her 
 								}
@@ -252,7 +252,7 @@ OUR MACHINES AND PROVIDING AFTER SALES SERVICE SUCESSFULLY.
 
                         <Typography
 								variant="body1"
-								color="black.dark"
+								color="primary.main"
 								className={
 									styles.heross 
 								}

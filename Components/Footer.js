@@ -85,7 +85,7 @@ function FooterW() {
 						</a>
 						<a
 							href="mailto:amirul@texsasbd.com"
-					
+						className="mail"
 						>
 							<Typography variant="body1" color="secondary.main">
 								amirul@texsasbd.com
@@ -94,6 +94,7 @@ function FooterW() {
 						<a
 							href="mailto:sales@texsasbd.com"
 							style={{ paddingBottom: "24px" }}
+							className="mail"
 						>
 							<Typography variant="body1" color="secondary.main">
 								sales@texsasbd.com

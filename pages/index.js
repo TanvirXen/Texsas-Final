@@ -471,7 +471,7 @@ function Home(props) {
 				style={{ paddingBottom: "40px", paddingTop: "40px" }}
 			>
 				<Marquee
-					duration={6000}
+					duration={9000}
 					background="#ffffff"
 					height="220px"
 					width="100%"
@@ -482,12 +482,14 @@ function Home(props) {
 				>
 					{brands.map((e) => {
 						return (
+							<Link 	key={e.name} href={'/brands/'+e.name} passHref>
 							<img
 								src={imageUrlFor(e.logo)}
 								alt=""
 								key={e.name}
 								className={styles.brandLogo}
 							/>
+							</Link>
 						);
 					})}
 				</Marquee>

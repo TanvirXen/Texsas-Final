@@ -18,12 +18,12 @@ $Primary: #FFFAC2;
     background-color: $Primary;
 }
 .brandLogo{
-    filter: grayscale(100%);
-
+    // filter: grayscale(100%);
+cursor: pointer;
 }
-.brandLogo:hover{
-    filter: grayscale(0%);
-}
+// .brandLogo:hover{
+//     filter: grayscale(0%);
+// }
 .padding100{
 	padding-top: 100px;
 }

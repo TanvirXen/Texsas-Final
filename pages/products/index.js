@@ -117,7 +117,7 @@ const [selectedB, setselectedB] = useState('')
 							}}
 						>
 							<AccordionSummary
-								expandIcon={<ExpandMoreIcon style={{ color: "#0BBA60" }} />}
+								expandIcon={<ExpandMoreIcon style={{ color: "#ED1C24" }} />}
 								aria-controls="panel1a-content"
 								id="panel1a-header"
 								style={{
@@ -133,7 +133,7 @@ const [selectedB, setselectedB] = useState('')
 									return (
 										<Typography
 											key={e.name}
-											color={selectedB==e.name ?'primary.main':'black.main'}
+											color={selectedB==e.name ?'red.light':'black.main'}
 											variant="h6"
 											style={{
 												boxShadow: " 0px 2px 0px #D0D0D0",
@@ -173,7 +173,7 @@ const [selectedB, setselectedB] = useState('')
 							}}
 						>
 							<AccordionSummary
-								expandIcon={<ExpandMoreIcon style={{ color: "#0BBA60" }} />}
+								expandIcon={<ExpandMoreIcon style={{ color: "#ED1C24" }} />}
 								aria-controls="panel1a-content"
 								id="panel1a-header"
 								style={{
@@ -189,7 +189,7 @@ const [selectedB, setselectedB] = useState('')
 									return (
 										<Typography
 											key={e.title}
-											color={selectedC==e.title ?'primary.main':'black.main'}
+											color={selectedC==e.title ?'red.light':'black.main'}
 											variant="h6"
 											style={{
 												boxShadow: " 0px 2px 0px #D0D0D0",

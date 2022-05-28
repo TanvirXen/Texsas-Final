@@ -33,7 +33,7 @@ a {
 	font-family: 'Inter';
 	text-decoration: none;
 	font-size: 18px;
-	color: $Primary;
+	color: $redL;
 	font-weight: bold;
 	text-transform: uppercase;
 	padding: 38px;
@@ -46,7 +46,7 @@ a {
 		position: relative;
 		z-index: 2;
 		a {
-			color: $Primary;
+			color: $redL;
 		}
 	}
 }
@@ -58,7 +58,7 @@ a {
 	left: 0;
 	width: 0;
 	height: 100%;
-	background: $Primary;
+	background: $redL;
 	transition: all 0.35s;
 }
 
@@ -213,7 +213,7 @@ footer {
 	border-radius: 0px;
 	height: 420px;
 	min-width: 300px;
-	border: 0px;
+	border: 0px !important;
 }
 .padding100T {
 	padding-top: 100px;
@@ -346,7 +346,11 @@ p{
 .slick-slide>div {padding: 0 5px;}
 
 /* the parent */
-
+.mail{
+	:hover{
+		text-decoration: underline;
+	}
+}
 //boardz start
 
 .boardz {
