@@ -205,7 +205,7 @@ function Products(props) {
 						>
 							{props.data.title}
 						</Typography>
-						{ (props.data)}
+				
 						<PortableText value={props.data.description} />
 					</Grid>
 				</Grid>
