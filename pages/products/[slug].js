@@ -108,13 +108,8 @@ function Products(props) {
 
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<meta property="og:type" content="website" />
-				<meta
-					property="og:url"
-					content={
-						"https://www.texsasbd.com/products/" + props.data.slug.current
-					}
-				/>
-				<meta property="og:title" content={"TEXSAS-" + props.data.model} />
+				<meta property="og:url" content={"https://texsasbd.com/"+props.data.slug.current} />
+				<meta property="og:title" content={props.data.mtitle} />
 				<meta
 					name="keywords"
 					content={
