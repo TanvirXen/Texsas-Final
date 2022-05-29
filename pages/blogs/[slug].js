@@ -9,7 +9,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { PortableText } from "@portabletext/react";
 import imageUrlFor from "../../utils/imageUrlFor.js";
 function Blog(props) {
-	console.log(props.data);
+	 (props.data);
 	return (
 		<div>
 			<Head>

@@ -15,7 +15,7 @@ import ProductCard from "../../Components/ProductCardS";
 import { useState, useCallback, useEffect, useRef } from "react";
 const blog = '*[_type=="brand"]';
 function Brands(props) {
-	console.log(props);
+	 (props);
 	const sliders = useRef(null);
 	var settingss = {
 		dots: false,
@@ -106,7 +106,7 @@ function Brands(props) {
 				<meta name="theme-color" content="#ffffff" />
 				<link rel="preconnect" href="https://vitals.vercel-insights.com" />
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
-				<meta property="og:url" content={"https://texsasbd.com/"+props.data.slug.current} />
+				<meta property="og:url" content={"https://texsasbd.com/"+props.data.name} />
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<meta property="og:type" content="website" />
 				<meta property="og:title" content={props.data.mtitle} />

@@ -16,7 +16,7 @@ import { useState, useCallback, useEffect, useRef } from "react";
 const blog = `*[_type=="product"]{...,product->,brand->}`;
 function Products(props) {
 	const sliders = useRef(null);
-	console.log(props.data);
+	 (props.data);
 	var settingss = {
 		dots: false,
 		infinite: false,
@@ -206,7 +206,7 @@ function Products(props) {
 						>
 							{props.data.title}
 						</Typography>
-						{console.log(props.data)}
+						{ (props.data)}
 						<PortableText value={props.data.description} />
 					</Grid>
 				</Grid>

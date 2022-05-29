@@ -6,7 +6,7 @@ import sanity from "../lib/sanity";
 import styles from "../styles/Brands.module.scss";
 import imageUrlFor from "../utils/imageUrlFor.js";
 function Gallery(props) {
-	console.log(props.card);
+	 (props.card);
 	return (
 		<div>
 						<Head>
