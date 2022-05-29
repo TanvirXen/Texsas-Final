@@ -79,7 +79,7 @@ function Products(props) {
 	return (
 		<div>
 			<Head>
-				<title>TEXSAS- {props.data.model}</title>
+				<title>{props.data.mtitle ||props.data.model}</title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<link
 					rel="apple-touch-icon"

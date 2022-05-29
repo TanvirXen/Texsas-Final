@@ -80,7 +80,7 @@ function Brands(props) {
 	return (
 		<div>
 			<Head>
-				<title>TEXSAS- {props.data.name} </title>
+				<title>{props.data.name} </title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<link
 					rel="apple-touch-icon"
