@@ -16,7 +16,6 @@ import { useState, useCallback, useEffect, useRef } from "react";
 const blog = `*[_type=="product"]{...,product->,brand->}`;
 function Products(props) {
 	const sliders = useRef(null);
-	 (props.data);
 	var settingss = {
 		dots: false,
 		infinite: false,

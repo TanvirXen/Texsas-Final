@@ -15,7 +15,6 @@ import ProductCard from "../../Components/ProductCardS";
 import { useState, useCallback, useEffect, useRef } from "react";
 const blog = '*[_type=="brand"]';
 function Brands(props) {
-	 (props);
 	const sliders = useRef(null);
 	var settingss = {
 		dots: false,
