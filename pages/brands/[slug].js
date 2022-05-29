@@ -80,7 +80,7 @@ function Brands(props) {
 	return (
 		<div>
 			<Head>
-				<title>{props.data.name} </title>
+				<title>{props.data.mtitle} </title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<link
 					rel="apple-touch-icon"
@@ -110,7 +110,6 @@ function Brands(props) {
 				<meta property="og:type" content="website" />
 				<meta property="og:title" content={props.data.mtitle} />
 					<meta name = "keywords" content = {"Texsas, Texsas Engineering,Textile Machines Bangladesh,Textile Bangladesh,Textile Machines BD,Texsas BD,Texsas Bangladesh,"+props.data.keyword} />
-				<meta property="og:title" content={"TEXSAS-"+props.data.name }/>
 				<meta property="og:description" content={props.data.sdescription} />
 				<meta
 					property="og:image"
