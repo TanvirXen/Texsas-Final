@@ -434,7 +434,6 @@ function Home(props) {
 	<img src="demo3.png" alt="" />
 	<img src="demo4.png" alt="" />
 	<img src="demo5.png" alt="" />
-	<img src="demo6.png" alt="" />
 
 						</Carousel>
 						</div>
