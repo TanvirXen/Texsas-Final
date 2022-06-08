@@ -41,7 +41,7 @@ function Blog(props) {
 
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<meta property="og:type" content="website" />
-				<meta property="og:url" content={"https://texsasbd.com/"+props.data.slug.current} />
+				<meta property="og:url" content={"https://texsasbd.com/blogs/"+props.data.slug.current} />
 				<meta property="og:title" content={props.data.mtitle} />
 				<meta name = "keywords" content = {"Texsas, Texsas Engineering,Textile Machines Bangladesh,Textile Bangladesh,Textile Machines BD,Texsas BD,Texsas Bangladesh,"+props.data.keywords} />
 				<meta
