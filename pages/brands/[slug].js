@@ -214,6 +214,7 @@ function Brands(props) {
 										title={e.model}
 										description={e.sdescription}
 										logo={e.brand.logo}
+										slug={e.slug.current}
 									/>
 								);
 							})}
