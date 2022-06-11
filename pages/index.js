@@ -509,7 +509,7 @@ function Home(props) {
 									color="secondary.dark"
 									style={{ marginBottom: "28px" }}
 								>
-									We creeate value from shipment to servicing.
+									We create value from shipment to servicing.
 								</Typography>
 								<span className="button1">
 									<Link href="/about">Learn More</Link>
@@ -676,7 +676,7 @@ function Home(props) {
 									TESTIMONIALS
 								</Typography>
 								<Typography variant="h2" color="black.dark">
-									We are a reknowned name in the industry
+									We are a renowned name in the industry
 								</Typography>
 								<Typography
 									variant="h6"
