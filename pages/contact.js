@@ -67,7 +67,7 @@ export default function Contact (){
 				<Container maxWidth="xl"  style={{paddingBottom:'40px'}}>
 					<Grid container spacing={4} direction="row">
 						<Grid item xs={12} md={6} lg={6} xl={6}>
-                        <InlineWidget url="https://calendly.com/tanvirishtiaq/meeting-1" styles={{
+                        <InlineWidget url="https://calendly.com/texas2022tech/texsas" styles={{
   height: '600px',paddingBottom:'100px',paddingTop:'100px'
 }}  />
                         </Grid>
