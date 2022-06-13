@@ -413,10 +413,11 @@ p {
 .carousel .slider-wrapper{
 	width: 100%;
     height: 600px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    // overflow: hidden;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+	object-fit: contain;
 }
 .carousel .thumbs-wrapper {
 
