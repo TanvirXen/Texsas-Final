@@ -410,6 +410,10 @@ p{
 p {
 	color: #585858;
 }
+.pimg{
+	width: 100%;
+	height: 600px;
+}
 .carousel .slider-wrapper{
 	width: 100%;
     height: 600px;
@@ -444,7 +448,10 @@ height: 500px;
 		}
 }
 @media only screen and (max-width: 525px) {
-
+	.pimg{
+		width: 100%;
+		height: 300px;
+	}
 	.customsilde {
 		height: 300px;
 		.carousel .slider-wrapper{
@@ -464,6 +471,10 @@ height: 500px;
 @media only screen and (max-width: 700px) {
 	.respImg {
 		width: 100px;
+	}
+	.pimg{
+		width: 100%;
+		height: 400px;
 	}
 	.carousel .slider-wrapper {
 		width: 100%;

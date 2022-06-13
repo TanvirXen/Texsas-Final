@@ -177,7 +177,7 @@ function Products(props) {
 									<img
 										src={imageUrlFor(e.asset)}
 										alt="Blog Image"
-										style={{ width: "100%", height: "500px" }}
+										className="pimg"
 										key={e.key}
 									/>
 								);
