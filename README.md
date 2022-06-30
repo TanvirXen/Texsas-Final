@@ -4,7 +4,7 @@ This is the final version of the project .
 
 This project is made with next.js, Sanity CMS, Material UI .
 
-You can check the website live at https://texsasv1.tanvirishtiaq.xyz/
+You can check the website live at https://texsasfinal.tanvirishtiaq.xyz/
 
 Original Website link : https://texsasbd.com/
 
