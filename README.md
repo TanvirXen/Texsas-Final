@@ -4,7 +4,9 @@ This is the final version of the project .
 
 This project is made with next.js, Sanity CMS, Material UI .
 
-You can check the website live at https://quizapp.tanvirishtiaq.xyz/
+You can check the website live at https://texsasv1.tanvirishtiaq.xyz/
+
+Original Website link : https://texsasbd.com/
 
 Feel free to check my portfolio at https://tanvirishtiaq.xyz/
 
